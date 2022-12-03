@@ -25,7 +25,7 @@
     line-height: 120%;
     word-wrap: break-word;
     transition: all 0.4s;
-    font-family:karla;
+    font-family:Karla;
     }
     
     /* DARK MODE STYLING */
@@ -233,6 +233,20 @@
         color: var(--drk-accent);
     }
     
+    div#banner { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        background-color: var(--accent); 
+        width: 100%; 
+        font-size: 12px;
+      }
+      div#banner-content { 
+        width: 1000px; 
+        margin: 0 350px; 
+        padding: 3px; 
+      }
+
     /* credit: DO NOT TOUCH */
     .crd {
     position: fixed;
@@ -269,25 +283,5 @@
     }
     
     
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Test</title>
-        <style type="text/css" media="screen">
-         * {
-           margin: 0; 
-           padding: 0;
-         }
-    
-         div#banner { 
-           position: absolute; 
-           top: 0; 
-           left: 0; 
-           background-color: var(--accent); 
-           width: 100%; 
-           font-size: 12px;
-         }
-         div#banner-content { 
-           width: 1000px; 
-           margin: 0 350px; 
-           padding: 3px; 
-         }
+       
     
