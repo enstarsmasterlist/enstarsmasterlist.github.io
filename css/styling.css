@@ -22,7 +22,7 @@
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 14px;
     color: var(--font);
-    line-height: 150%;
+    line-height: 120%;
     word-wrap: break-word;
     transition: all 0.4s;
     }
@@ -71,7 +71,7 @@
     border-radius: 8px;
     }
     
-    .links {margin: 0 10px;}
+    .links {margin: 0 15px;}
     
     .links a {
     background: var(--header);
