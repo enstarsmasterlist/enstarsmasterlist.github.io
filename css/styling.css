@@ -210,7 +210,7 @@
         font-size: 0.85em;
     }
     
-    table#table {
+    table#info {
       margin-top: 0.7em;
       background-color: #f0f0f0 ;
       max-width: 100%;
@@ -222,7 +222,7 @@
     }
     
     
-    body.night table#table {
+    body.night table#info {
         background-color: var(--drk-bg);
         color: var(--drk-accent);
     }
