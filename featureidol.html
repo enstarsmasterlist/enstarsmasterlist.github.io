@@ -1,0 +1,1848 @@
+<!--
+3 am © xroub.tumblr.com
+
+credits:
+isotope combination filtering tutorial by magnusthemes.tumblr.com
+https://phosphoricons.com/
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feature and Idol Masterlist</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://unpkg.com/phosphor-icons"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+// isotope-combination-filtering
+$(document).ready(function() {
+ var $container = $(".grid");
+ var filters = {};
+ var $grid = $container.isotope({
+   itemSelector: ".item", 
+   percentPosition: true 
+ });
+
+
+$(".option-set a").click(function(e) {
+   var $this = $(this); 
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr);
+   var $optionSet = $this.parents(".option-set");
+   var group = $optionSet.attr("data-filter-group");
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]');
+   var activeClass = "selected",
+     exclClass = "exclusive";
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+
+// DARK MODE
+window.addEventListener("DOMContentLoaded", function() {
+const btn = document.querySelector(".lightswitch");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+document.body.classList.add("night");
+}
+
+btn.addEventListener("click", function () {
+document.body.classList.toggle("night");
+
+let theme = "light";
+if (document.body.classList.contains("night")) {
+theme = "dark";
+}
+localStorage.setItem("theme", theme);
+});
+});
+</script>
+
+<link rel="stylesheet" href="css/stylingalt.css">
+
+</head>
+<body>
+
+<div id="banner">
+    <div id="banner-content">
+    <i>Please respect each individual translator's terms of use. Every translator holds the right to withdraw their content from this list at any time.</i>
+    </div>
+  </div>
+
+<header>
+<img src="{PortraitURL-128}" class="avtr">
+
+<div class="links">
+<a href="https://enstarsmasterlist.github.io/"><i class="ph-house-fill"></i></a>
+<a href="https://retrospring.net/@enstarsML"><i class="ph-envelope-fill"></i></a>
+<a class="lightswitch"><i class="ph-moon-fill"></i></a>
+</div>
+
+<div class="filters">
+
+<ul class="filter option-set exclusive" data-filter-group="gen">
+<li class="filter option-set exclusive"><a href="#" data-filter-value="" class="reset selected">All</a></li> <!-- IMPROTANT! make sure not to delete! -->
+<li class="filter option-set exclusive"><a href="#" data-filter-value=".tl">TL Available</a></li>
+</ul>
+
+<ul class="filter option-set" data-filter-group="era">
+<li><b>STORY TYPE</b></li>
+<li><a href="#" data-filter-value="" class="selected">All</a></li>
+<li><a href="#" data-filter-value=".sub">Sub Story (!)</a></li>
+<li><a href="#" data-filter-value=".idol">Idol Story (!!)</a></li>
+<li><a href="#" data-filter-value=".intro">Introduction Scouts</a></li>
+<li><a href="#" data-filter-value=".feature">Feature Scouts</a></li>
+</ul>
+
+<ul class="filter option-set" data-filter-group="unit">
+<li><b>UNIT</b></li>
+<li><a href="#" data-filter-value="" class="selected">All</a></li>
+<li><a href="#" data-filter-value=".fine">fine</a></li>
+<li><a href="#" data-filter-value=".trickstar">Trickstar</a></li>
+<li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
+<li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
+<li><a href="#" data-filter-value=".eden">Eden</a></li>
+<li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
+<li><a href="#" data-filter-value=".2wink">2wink</a></li>
+<li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
+<li><a href="#" data-filter-value=".undead">UNDEAD</a></li>
+<li><a href="#" data-filter-value=".rabits">Ra*bits</a></li>
+<li><a href="#" data-filter-value=".aktk">AKATSUKI</a></li>
+<li><a href="#" data-filter-value=".knights">Knights</a></li>
+<li><a href="#" data-filter-value=".switch">Switch</a></li>
+<li><a href="#" data-filter-value=".mam">MaM</a></li>
+</ul>
+
+<ul class="filter option-set" data-filter-group="season">
+<li><b>SEASON</b></li>
+<li><a href="#" data-filter-value="" class="selected">All</a></li>
+<li><a href="#" data-filter-value=".spring">Spring</a></li>
+<li><a href="#" data-filter-value=".summer">Summer</a></li>
+<li><a href="#" data-filter-value=".autumn">Autumn</a></li>
+<li><a href="#" data-filter-value=".winter">Winter</a></li>
+<li><a href="#" data-filter-value=".nextspring">Spring (Following Year)</a></li>
+</ul>
+
+
+</div>
+</header>
+<!-- HEADER ENDS -->
+
+<!-- GRID STARTS -->
+<section class="grid">
+
+<div class="item intro knights autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054209268162773002/ci_383_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Musical Composition</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Leo, Tsukasa</p>
+</div></div>
+</div>
+
+<div class="item intro rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282662447165441/ci_295_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Cat Searching</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Chiaki</p>
+</div></div>
+</div>
+
+<div class="item sub fine spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054210774509305926/ci_243_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Totally Twisted</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tori, Izumi</p>
+</div></div>
+</div>
+
+<div class="item sub aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054210774949711912/ci_247_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Soul in a Single Stroke</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Keito, Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054210774110834688/ci_248_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Wavering Water Surface</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kaoru, Kanata</p>
+</div></div>
+</div>
+
+<div class="item intro rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054213188557738094/ci_113_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Morning Practice</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Midori, Chiaki, Kanata</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744171188305950/ci_246_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>My Turf</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Yuzuru, Koga, Tori</p>
+<a href="https://aeoki.tumblr.com/post/157220606082/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054213188289310842/ci_251_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Good Boy, Bad Boy, Ordinary Boy</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tomoya, Mitsuru, Hajime, Nazuna</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054213187995713596/ci_254_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Vampire Brothers</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Rei, Ritsu, Mao</p>
+</div></div>
+</div>
+
+<div class="item trickstar intro spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054224611346239538/ci_490_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Comrades</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Hokuto, Subaru, Mao, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub 2wink spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054215809259544707/ci_241_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Older Brother and Younger Brother</h2>
+<i>Akira (日日日)</i>
+</table>
+<p><b>Characters: </b>Yuta, Rei</p>
+</div></div>
+</div>
+
+<div class="item sub 2wink spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054215810022899822/ci_245_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Donning Chivalry</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hinata, Kuro, Tetora</p>
+</div></div>
+</div>
+
+<div class="item sub aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054215809599291472/ci_250_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>(Continuation) Donning Chivalry</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kuro, Tetora, Yuta, Hinata</p>
+</div></div>
+</div>
+
+<div class="item intro knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054224613091053588/ci_491_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Physical Fitness Test</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Izumi, Hokuto, Subaru, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054218957453795358/ci_242_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Swaying in the Wind</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Arashi, Mitsuru, Adonis</p>
+</div></div>
+</div>
+
+<div class="item sub rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054218957038551130/ci_244_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Let Me Hear Your Voice</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nazuna</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054224612684222474/ci_370_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Everyday Basketball Club</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mao, Chiaki, Midori, Subaru</p>
+</div></div>
+</div>
+
+<div class="item sub valkrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054221320809877564/ci_534_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Threads Cannot Be Seen</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Shu, Kuro</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054221319849394187/ci_536_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Song of the Garbage Dump</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mika, Shu, Nazuna</p>
+</div></div>
+</div>
+
+<div class="item intro valkyrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054224612281565245/ci_580_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Sovereign's Tuning</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Shu</p>
+</div></div>
+</div>
+
+<div class="item sub fine spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296258828832778/ci_249_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Resounding Love</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Wataru, Hokuto, Tomoya</p>
+</div></div>
+</div>
+
+<div class="item sub knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296259982266388/ci_252_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Aristocrat and Attendant</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tsukasa, Yuzuru</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054225093582147624/ci_371_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Birth of Basukebon</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Midori, Mao</p>
+</div></div>
+</div>
+
+<div class="item intro valkyrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054227489272111114/ci_595_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Nice Day to Meet</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Mika</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296260330401814/ci_253_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Warriors and Ninjas</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Shinobu, Souma</p>
+</div></div>
+</div>
+
+<div class="item sub knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054227489611853844/ci_369_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Cooking is Love and Hate</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Izumi</p>
+</div></div>
+</div>
+
+<div class="item sub aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054227489934807121/ci_372_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>1 on 1</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Subaru</p>
+</div></div>
+</div>
+
+<div class="item intro aktk spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051746230025326653/ci_92_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Lunch Suggestion</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Kuro</p>
+<a href="https://aeoki.tumblr.com/post/151853577342/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054227488580055060/ci_325_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Paradise within the Box</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Leo, Yuzuru, Keito, Tsukasa</p>
+</div></div>
+</div>
+
+<div class="item sub aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054231206184628274/ci_368_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Favor Given is a Favor Received</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Souma, Kanata</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054231206679552081/ci_367_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Night Watch</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Chiaki, Jin</p>
+</div></div>
+</div>
+
+<div class="item sub switch spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054232781443567687/ci_690_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Intuition and Logic</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Sora, Natsume</p>
+</div></div>
+</div>
+
+<div class="item sub switch spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744140775395398/ci_691_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Beware of the Magician</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Natsume, Subaru</p>
+<a href="https://aeoki.tumblr.com/post/157228059107/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub switch spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054232780789268480/ci_692_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>This Senior is Prone to Worrying</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tsumugi, Natsume, Sora</p>
+</div></div>
+</div>
+
+<div class="item sub switch spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744140112711720/ci_708_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Small Token of Gratitude</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Sora, Tsumugi</p>
+<a href="https://aeoki.tumblr.com/post/152543028007/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub fine spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744155321245726/ci_377_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Draw Draw</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Yuzuru, Keito, Tsukasa</p>
+<a href="https://aeoki.tumblr.com/post/157225912347/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054248257200607292/ci_380_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Improv Theater</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hokuto, Tomoya, Wataru</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112249941620949012/ci_381_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Today's Guest</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Makoto, Nazuna, Shinobu</p>
+</div></div>
+</div>
+
+<div class="item intro switch spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054240480386351114/ci_733_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Library Committee Member's Privilege</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Tsumugi</p>
+</div></div>
+</div>
+
+<div class="item sub spring switch">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054238639988690995/ci_693_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Your Color</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Sora, Yuta</p>
+</div></div>
+</div>
+
+<div class="item sub spring switch">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054238639678292008/ci_694_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Coming from Afar</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Natsume, Kanata, Souma</p>
+</div></div>
+</div>
+
+<div class="item intro spring switch">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054240481153908877/ci_758_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Promise for Someday</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Natsume, Tsumugi, Sora</p>
+</div></div>
+</div>
+
+<div class="item sub knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054247849862369380/ci_376_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Cup of Awakening</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Ritsu, Mao</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744154662735882/ci_382_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Fruits of the Sea</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kanata, Souma, Kaoru</p>
+<a href="https://aeoki.tumblr.com/post/157228608012/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub spring switch">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054240480830959626/ci_695_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Black Swan</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tsumugi, Mika</p>
+</div></div>
+</div>
+
+<div class="item intro knights spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054268353268699207/ci_783_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>True Ability</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Ritsu</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054266090311655555/ci_373_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Protector</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Adonis, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub spring fine">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054243169367249007/ci_861_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Afternoon Royaltea</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054247849258393693/ci_379_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Enter the Tiger</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tetora</p>
+</div></div>
+</div>
+
+<div class="item intro aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054266089070137394/ci_821_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>How is the Food?</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Souma</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744170882113576/ci_276_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Idiot Quartet</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Koga, Hinata, Yuta, Rei</p>
+<a href="https://aeoki.tumblr.com/post/161679834547/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub knights spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744170542379048/ci_365_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Voice Training at Work</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Arashi, Nazuna</p>
+<a href="https://aeoki.tumblr.com/post/162047162592/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub rabits spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744151219212349/ci_375_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Express Messenger</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mitsuru, Adonis</p>
+<a href="https://aeoki.tumblr.com/post/161687026722/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item intro 2wink spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054266089992884365/ci_863_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Cooking is Love</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hinata, Yuta</p>
+<a href="twilightmalachite.tumblr.com/cookingislove">Translation by Mika Enstars</a></div></div>
+</div>
+
+<div class="item sub rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054247849581359104/ci_378_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The First Step</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hajime</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054258580582305862/ci_822_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Pearls Before The Emperor</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Subaru, Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub knights spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744153349918740/ci_825_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Leisurely Self-bondage</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Izumi, Makoto, Yuta</p>
+<a href="https://aeoki.tumblr.com/post/160364093117/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item intro mam spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054249825492811796/ci_910_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Festival Guy's Style</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Madara</p>
+</div></div>
+</div>
+
+<div class="item sub mam spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054249824612007956/ci_908_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Mother Earth</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Madara, Adonis, Arashi, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub mam spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054249824205164554/ci_909_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Return of Mr. Festival</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Madara, Leo</p>
+</div></div>
+</div>
+
+<div class="item intro undead spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744152854994974/ci_838_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Magic of a Smile</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Adonis</p>
+<a href="https://anakidd.dreamwidth.org/3652.html">Translation by anakidd</a></div></div>
+</div>
+
+<div class="item sub fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296259642531870/ci_364_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Dog Days</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Yuzuru, Subaru, Koga</p>
+</div></div>
+</div>
+
+<div class="item sub 2wink spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744141081595944/ci_890_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Virtual Offense and Defense</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Yuta, Hinata, Makoto</p>
+<a href="https://aeoki.tumblr.com/post/162044817342/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item sub rabits Summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054251944560037959/ci_962_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Ni~chan and I</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nazuna, Tori</p>
+<a href="https://aeoki.tumblr.com/post/162228365502/">Translation by Creampuff</a></div></div>
+</div>
+
+<div class="item intro fine spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054258581278568558/ci_947_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Effort Behind the Scenes</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Yuzuru, Tori</p>
+</div></div>
+</div>
+
+<div class="item sub aktk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282663533498378/ci_272_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Sword Dance</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Souma</p>
+</div></div>
+</div>
+
+<div class="item sub undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054258580959805461/ci_961_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Gods' Play</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Rei, Kanata, Wataru</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744151835779123/ci_963_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Cindarella Burning at the Stake's Stage</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tomoya, Wataru, Hokuto</p>
+<a href="https://tomoya.moe/tl/idol_story/tomoya/cinderella_burning_at_the_stakes_stage">Translation by Ren</a></div></div>
+</div>
+
+<div class="item intro rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054266089372131338/ci_986_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Break Time with Bunnies</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Nazuna, Tomoya, Hajime, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282663214723132/ci_273_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Intercultural Communication</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Makoto, Souma</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296258082254858/ci_274_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Launching Somen</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mao, Subaru, Hokuto, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282662849822730/ci_275_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Tea Garden</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Ritsu, Hajime, Eichi</p>
+</div></div>
+</div>
+
+<div class="item intro rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054271210269192192/ci_1011_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Acting Before Thinking</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Mitsuru, Tomoya, Hajime</p>
+</div></div>
+</div>
+
+<div class="item sub rst summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054268354342440960/ci_823_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Legendary Hero!</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Chiaki, Tetora, Midori, Jin</p>
+<a href="https://310mc.github.io/legendary_hero/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub rst spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054268353985904640/ci_891_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Hero Game</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Midori, Chiaki, Kanata, Tetora, Shinobu</p>
+<a href="https://310mc.github.io/hero_game/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub rst summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054268353612615730/ci_960_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>When I Drifted Ashore</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kanata</p>
+<a href="https://310mc.github.io/when_i_drifted_ashore/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item intro 2wink spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744139751993385/ci_1037_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Crossing Paths</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Yuta, Hinata</p>
+<a href="https://twilightmalachite.tumblr.com/crossingpaths">Translation by Mika Enstars</a></div></div>
+</div>
+
+<div class="item sub fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296259189551215/ci_366_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Emperor Assassination</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Eichi, Mao, Keito</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054271209942044672/ci_1137_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Mabinogion</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mika, Ritsu</p>
+</div></div>
+</div>
+
+<div class="item sub fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054271210562789386/ci_892_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>As No-Tori-ously Haughty As Ever</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tori, Izumi, Makoto, Nazuna</p>
+</div></div>
+</div>
+
+<div class="item intro fine spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744141987565609/ci_1063_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Sweet Temptation</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Tori</p>
+<a href="https://twilightmalachite.tumblr.com/sweettemptation">Translation by Mika Enstars</a></div></div>
+</div>
+
+<div class="item sub undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278850042925156/ci_921_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Morning Tranquility</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Adonis</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278849644474438/ci_1135_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Class Rep and the Homeroom Teacher</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hokuto, Jin</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278850412040232/ci_964_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Cute Grievances</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hajime, Eichi, Ritsu</p>
+</div></div>
+</div>
+
+<div class="item intro trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278849321521182/ci_1156_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Special Outfit</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Makoto, Subaru, Hokuto, Mao</p>
+</div></div>
+</div>
+
+<div class="item sub knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278848155488320/ci_1134_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Please Teach Me! Ritsu-senpai</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tsukasa, Ritsu, Mao</p>
+</div></div>
+</div>
+
+<div class="item sub aktk spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278848486854758/ci_1136_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Folk Song</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kuro, Nazuna</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278848902082580/ci_1139_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Immature People</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Shu, Mika</p>
+</div></div>
+</div>
+
+<div class="item intro undead spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054296258455543898/ci_1278_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Guide</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Rei, Adonis, Koga</p>
+</div></div>
+</div>
+
+<div class="item sub undead spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278847023034379/ci_824_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Boy and the Sea</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kaoru, Koga</p>
+</div></div>
+</div>
+
+<div class="item sub rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278847836729414/ci_1138_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Network</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Shinobu, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub 2wink summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054278847455055872/ci_965_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Spell of "Change"</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hinata, Sora</p>
+</div></div>
+</div>
+
+<div class="item intro fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282661696385095/ci_1306_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Emperor's Invitation</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub knights autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282661335678986/ci_1308_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>With Pen to Paper</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Leo, Tsumugi</p>
+</div></div>
+</div>
+
+<div class="item sub fine summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051744141664587796/ci_1376_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The B in Class B Stands For...</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tori, Tsukasa, Shinobu, Mitsuru, Sora, Yuta</p>
+<a href="https://twilightmalachite.tumblr.com/thebinclassb">Translation by Mika Enstars</a></div></div>
+</div>
+
+<div class="item sub fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054282662040322058/ci_1140_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Reversed Joker</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Wataru, Hokuto, Tomoya</p>
+</div></div>
+</div>
+
+<div class="item intro rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054286419629178900/ci_1334_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Happy Everyday Life</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Shinobu, Chiaki, Kanata, Midori, Tetora</p>
+</div></div>
+</div>
+
+<div class="item sub rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054284966038609950/ci_1309_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>An Exchange out of Left Field</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Tetora, Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub switch summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054284965363322931/ci_1377_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>High Score Boys</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Sora, Natsume, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054284965719851058/ci_1378_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Unbroken Bond</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nazuna, Tomoya, Hajime, Mitsuru, Shu, Mika, Tetora, Kuro</p>
+</div></div>
+</div>
+
+<div class="item intro trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055751564066836531/ci_1359_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Two's Dream</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Subaru, Hokuto</p>
+</div></div>
+</div>
+
+<div class="item sub aktk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054286419335593984/ci_1307_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Chasing Demons Away</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Keito, Hinata, Yuta</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054286419021013002/ci_1141_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>A Game of Tag with Mama</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mitsuru, Madara, Hajime</p>
+<a href="https://310mc.github.io/game_of_tag_with_mama/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub switch summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054286419943759912/ci_1493_normal_waifu2x_art_noise1_scale1.png"></div>
+<div class="right"><h2>Natsume's Extraordinary Day</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Natsume, Makoto</p>
+<a href="https://valentines0eve.wordpress.com/2021/07/11/natsumes-not-so-average-day-natsumes-sub-story-feat-makoto/">Translation by Potay</a></div></div>
+</div>
+
+<div class="item sub rabits spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055747387320184842/ci_199_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Rainy Sky and an Umbrella</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Hajime</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055715802411704391/Manga_Exchange_Tomoya_Mashiro_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Sharing the Fun</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tomoya, Hajime, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055743317603795065/Senpai_Discussion_Midori_Takamine_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Melancholic Club Activities</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Midori, Chiaki, Hajime, Tomoya</p>
+<a href="https://310mc.github.io/melancholic_club_activities/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055737706866544690/928d3890-0d9b-4e31-81a9-935377cc4fd3_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Failures and Expectations</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Tori, Mao, Eichi</p>
+</div></div>
+</div>
+
+<div class="item sub rst spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055748059302215680/ci_200_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Ninja Training</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Shinobu</p>
+</div></div>
+</div>
+
+<div class="item sub 2wink summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055736878348894218/f8aa7721-84d2-410c-ae7a-29bdf1f660df_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Music I Want to Listen To</h2>
+<i>Happy Elements, Inc (Happy Elements株式会社)</i>
+<p><b>Characters: </b>Yuta, Koga</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055737707936088215/915f6085-2211-465b-9f0a-378e996d62a8_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Bread Is What Connects Us</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Mitsuru, Shinobu, Tsukasa</p>
+</div></div>
+</div>
+
+<div class="item sub rabits autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055606027053191199/Way_of_the_Bow_Tsukasa_Suou_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Yoichi's Revenge</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tsukasa, Keito, Leo</p>
+</div></div>
+</div>
+
+<div class="item sub switch summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055606458991001610/Game_Dialogue_Sora_Harukawa_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Colorful Games</h2>
+<i>Kino Seitaro (木野誠太郎)</i>
+<p><b>Characters: </b>Sora, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055747386938511421/ci_292_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Idol Audition - Grand Prix</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Hokuto</p>
+</div></div>
+</div>
+
+<div class="item sub trickstar spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055747386938511421/ci_292_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Idol Audition - Second Grand Prix</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Mao</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112249841599385660/ci_517_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Scarecrow's Wish</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Mika, Shu</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112249841200939018/ci_516_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Puppet Sovereign</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Shu, Mika, Nazuna, Hajime, Tomoya, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/769827966112759838/1055711748126167050/52985aba-eb60-479d-9f56-1478c658b7ad_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>With All My Heart</h2>
+<i>Kino Seitaro (木野誠太郎)</i>
+<p><b>Characters: </b>Mika, Arashi</p>
+</div></div>
+</div>
+
+<div class="item sub switch autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055606458672218172/Rainy_Day_Natsume_Sakasaki_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>When Will the Rain Let Up?</h2>
+<i>Kino Seitaro (木野誠太郎)</i>
+<p><b>Characters: </b>Natsume, Tsumugi, Sora</p>
+</div></div>
+</div>
+
+<div class="item sub aktk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054286419335593984/ci_1307_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Chasing Demons Away</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Keito, Hinata, Yuta</p>
+</div></div>
+</div>
+
+<div class="item sub knights autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055713615858114600/34a690af-5829-425f-9d6a-bb77f07f60f6_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Get Your Head in the Game</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Izumi, Keito, Eichi, Chiaki</p>
+</div></div>
+</div>
+
+<div class="item sub knights">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1064354878576660540/ci_10001_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Fealty of a Knight</h2>
+<i>Mitsuki</i>
+<p><b>Characters: </b>Izumi</p>
+</div></div>
+</div>
+
+<div class="item sub knights">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1064354878798954536/ci_10041_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Audition</h2>
+<i>Mitsuki</i>
+<p><b>Characters: </b>Izumi, Arashi</p>
+</div></div>
+</div>
+
+<div class="item sub rst autumn tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055710861970395198/Study_Session_Chiaki_Morisawa_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Study Heroes</h2>
+<i>Kino Seitaro (木野誠太郎)</i>
+<p><b>Characters: </b>Chiaki, Kanata, Shinobu, Tetora, Midori</p>
+<a href="https://310mc.github.io/study_heroes/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub aktk autumn tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/769827966112759838/1055711747798994944/ba797283-3e5d-4dc4-9ea8-39662997e5c8_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Crimson's Pure Heart</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Kuro, Midori, Tetora</p>
+<a href="https://310mc.github.io/crimsons_pure_heart/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item sub rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055713615509983262/Playing_at_the_Beach_Kanata_Shinkai_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Other Side of the Tunnel</h2>
+<i>Happy Elements, Inc (Happy Elements株式会社)</i>
+<p><b>Characters: </b>Kanata, Kaoru</p>
+</div></div>
+</div>
+
+<div class="item sub undead autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055711241169031208/Practice_Match_Rei_Sakuma_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Silver Bullet</h2>
+<i>Kino Seitaro (木野誠太郎)</i>
+<p><b>Characters: </b>Rei, Koga, Mao, Hinata, Yuta</p>
+</div></div>
+</div>
+
+<div class="item sub rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1054284965719851058/ci_1378_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Unbroken Bond</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nazuna, Tomoya, Hajime, Mitsuru, Shu, Mika, Tetora, Kuro</p>
+</div></div>
+</div>
+
+<div class="item sub knights autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055743317234688050/Place_to_Write_Leo_Tsukinaga_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Classroom Composer</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Leo, Nazuna, Wataru</p>
+</div></div>
+</div>
+
+<div class="item sub valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055743317993857054/New_Outfit_Shu_Itsuki_Mini_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Summer Girl</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Shu, Kaoru</p>
+</div></div>
+</div>
+
+<div class="item sub mam summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1055736878663479368/586a20f8-68c6-437f-bdae-2d50370bd14a_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Song That Brings Peace</h2>
+<i>Yuuki Yoshino (結城由乃)</i>
+<p><b>Characters: </b>Madara, Adonis, Arashi, Mitsuru</p>
+</div></div>
+</div>
+
+<div class="item sub eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256838566694922/ci_1441_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Selfish Noble</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hiyori, Jun</p>
+</div></div>
+</div>
+
+<div class="item sub eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256838877052928/ci_1441_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Same as Ohii-san</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Hiyori, Tori, Yuzuru</p>
+</div></div>
+</div>
+
+<div class="item sub eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256839770439690/ci_1443_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Hyena's Pure Heart</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Jun, Makoto</p>
+</div></div>
+</div>
+
+<div class="item sub eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112257005395124306/ci_1443_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Curse of the Bastard Child</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Jun, Jin</p>
+</div></div>
+</div>
+
+<div class="item sub eden autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256839254560808/ci_1440_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>The Fruit of Knowledge</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nagisa, Ibara</p>
+</div></div>
+</div>
+
+<div class="item sub eden autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256843067179128/ci_1440_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Former Kings</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Nagisa, Eichi, Hiyori, Tsumugi</p>
+</div></div>
+</div>
+
+<div class="item sub eden autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256837765582878/ci_1442_normal_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Every Rose Has Its Thorn</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Ibara, Yuzuru</p>
+</div></div>
+</div>
+
+<div class="item sub eden autumn">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112256838113697792/ci_1442_evolution_waifu2x_art_noise1_scale.png"></div>
+<div class="right"><h2>Poisonous Snake's Tongue</h2>
+<i>Akira (日日日)</i>
+<p><b>Characters: </b>Ibara, Nagisa, Hiyori, Jun</p>
+</div></div>
+</div>
+
+<div class="item feature valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901838908395661/card_square1_2205_evolution.png"></div>
+<div class="right"><h2>First Outfit</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mika, Tsumugi</p>
+</div></div>
+</div>
+
+<div class="item idol rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901808122216508/card_square1_2206_normal.png"></div>
+<div class="right"><h2>Small Ocean</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Kanata</p>
+</div></div>
+</div>
+
+<div class="item idol rabits summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051710514172018768/card_square1_2207_normal.png"></div>
+<div class="right"><h2>An Admirable Specialty</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tomoya, Shinobu</p>
+<a href="https://valentines0eve.wordpress.com/2021/07/25/an-admirable-specialty-tomoyas-3%e2%98%86-fs-story-feat-shinobu/">Translation by Potay</a></div></div>
+</div>
+
+<div class="item idol rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901865391235136/card_square1_2208_normal.png"></div>
+<div class="right"><h2>Multiplied Happiness</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hajime</p>
+</div></div>
+</div>
+
+<div class="item idol alk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902457434017792/card_square1_2412_evolution.png"></div>
+<div class="right"><h2>A Priest's Bemusement</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tatsumi, Aira</p>
+</div></div>
+</div>
+
+<div class="item idol mam summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050277427303153684/card_square1_2413_normal.png"></div>
+<div class="right"><h2>New Office Staff</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Madara, Chiaki</p>
+<a href="https://mikarashis.tumblr.com/post/615046183004569600/">Translation by FleetingMelody</a></div></div>
+</div>
+
+<div class="item idol 2wink summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902495623155762/card_square1_2414_evolution.png"></div>
+<div class="right"><h2>Budding Violinist</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Yuta, Koga</p>
+</div></div>
+</div>
+
+<div class="item idol switch summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902495245680660/card_square1_2415_normal.png"></div>
+<div class="right"><h2>Wish Upon a Wool</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Sora, Ritsu</p>
+</div></div>
+</div>
+
+<div class="item feature eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901930465865818/card_square1_2222_evolution.png"></div>
+<div class="right"><h2>The Viper's Strategy</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Ibara</p>
+</div></div>
+</div>
+
+<div class="item idol trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901946282594474/card_square1_2223_normal.png"></div>
+<div class="right"><h2>Comedy Crash Course</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hokuto, Makoto</p>
+</div></div>
+</div>
+
+<div class="item idol undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901945766678568/card_square1_2224_normal.png"></div>
+<div class="right"><h2>One of a Kind</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Adonis, Nagisa</p>
+</div></div>
+</div>
+
+<div class="item idol 2wink summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901960358678528/card_square1_2225_normal.png"></div>
+<div class="right"><h2>Gentle Remedy</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hinata, Natsume</p>
+</div></div>
+</div>
+
+<div class="item feature undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053901994278006925/card_square1_2354_normal.png"></div>
+<div class="right"><h2>Wolf Will Rock You</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Koga, Mao, Subaru, Tatsumi</p>
+</div></div>
+</div>
+
+<div class="item idol valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902000028389417/card_square1_2355_normal.png"></div>
+<div class="right"><h2>Exquisite Stitchwork</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Shu, Mika</p>
+</div></div>
+</div>
+
+<div class="item idol undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902019653541938/card_square1_2356_normal.png"></div>
+<div class="right"><h2>Idol☆Hijack</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Rei, Kaoru</p>
+</div></div>
+</div>
+
+<div class="item idol rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902019313811456/card_square1_2357_normal.png"></div>
+<div class="right"><h2>Why Not Try It On?</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Nazuna, Kuro</p>
+</div></div>
+</div>
+
+<div class="item feature knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902537851408454/card_square1_2428_evolution.png"></div>
+<div class="right"><h2>Flight of the Fairy</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Izumi, Makoto, Arashi</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902545254359121/card_square1_2429_normal.png"></div>
+<div class="right"><h2>The Protagonist is King</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Leo, Hokuto</p>
+</div></div>
+</div>
+
+<div class="item idol rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902563738648686/card_square1_2430_normal.png"></div>
+<div class="right"><h2>Schrödinger's Monster</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tetora, Midori, Wataru</p>
+</div></div>
+</div>
+
+<div class="item idol eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902563243724871/card_square1_2431_normal.png"></div>
+<div class="right"><h2>Emergency! Secret Mission</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Shinobu, Kanata, Chiaki</p>
+</div></div>
+</div>
+
+<div class="item feature fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902591056171058/card_square1_2444_evolution.png"></div>
+<div class="right"><h2>Ideal Self</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tori, Hokuto, Subaru</p>
+</div></div>
+</div>
+
+<div class="item idol fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902596294848612/card_square1_2445_normal.png"></div>
+<div class="right"><h2>Summer, Ice Cream, and the Student Council</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Yuzuru, Mao</p>
+</div></div>
+</div>
+
+<div class="item idol crazyb spring">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902614179368970/card_square1_2446_normal.png"></div>
+<div class="right"><h2>Crazy Monster</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Rinne, Shu</p>
+</div></div>
+</div>
+
+<div class="item idol eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902613852201020/card_square1_2447_normal.png"></div>
+<div class="right"><h2>Another Average Day</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Nagisa, Tsumugi, Tsukasa, Kaoru, Hajime</p>
+</div></div>
+</div>
+
+<div class="item feature trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053939209213313125/card_square1_2456_evolution.png"></div>
+<div class="right"><h2>After School, Youth, and the Student Council</h2>
+<i>Nishioka Maiko (西岡麻衣子)</i>
+<p><b>Characters: </b>Mao, Subaru, Hokuto, Makoto, Tori</p>
+</div></div>
+</div>
+
+<div class="item idol trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902775735566346/card_square1_2457_normal.png"></div>
+<div class="right"><h2>A Challenger Appears!</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Makoto, Hiiro</p>
+</div></div>
+</div>
+
+<div class="item idol fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902786317787206/card_square1_2458_normal.png"></div>
+<div class="right"><h2>Teatime of Black and White</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Eichi, Rei, Keito</p>
+</div></div>
+</div>
+
+<div class="item idol rst summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902793087397929/card_square1_2459_normal.png"></div>
+<div class="right"><h2>Making-100-Friends-Project</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Midori, Hinata, Sora, Mitsuru</p>
+<a href="https://310mc.github.io/making_100_friends_project/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item feature trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902824146223184/card_square1_2476_evolution.png"></div>
+<div class="right"><h2>My Dream is to One Day Surpass You</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hokuto, Subaru, Makoto, Mao, Seiya</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902830035017808/card_square1_2477_normal.png"></div>
+<div class="right"><h2>Our Personal Style</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tsukasa, Shinobu, Souma</p>
+</div></div>
+</div>
+
+<div class="item idol eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902846258589706/card_square1_2478_normal.png"></div>
+<div class="right"><h2>Fine Weather for a Handshake Event</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hiyori, Ibara, Aira</p>
+</div></div>
+</div>
+
+<div class="item idol alk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902845855944768/card_square1_2479_normal.png"></div>
+<div class="right"><h2>Crown of Gratitude</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hiiro, Tori</p>
+</div></div>
+</div>
+
+<div class="item feature rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902872762384485/card_square1_2480_evolution.png"></div>
+<div class="right"><h2>Future Superstar</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mitsuru, Leo, Niki, Kuro, Mayoi</p>
+</div></div>
+</div>
+
+<div class="item idol rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902878928011314/card_square1_2481_normal.png"></div>
+<div class="right"><h2>Midnight Encounter</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tetora, Kuro</p>
+</div></div>
+</div>
+
+<div class="item idol trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902904509087774/card_square1_2482_normal.png"></div>
+<div class="right"><h2>Because We're Friends</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Subaru, Natsume</p>
+</div></div>
+</div>
+
+<div class="item idol valkyrie tl summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051710868116754432/card_square1_2483_normal.png"></div>
+<div class="right"><h2>What Day Is It Today?</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Shu, Mitsuru</p>
+<a href="https://valentines0eve.wordpress.com/2021/06/26/what-day-is-it-today-shus-3%e2%98%86-fs-story-feat-mitsuru/">Translation by Potay</a></p></div></div>
+</div>
+
+<div class="item feature crazyb summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902933781139473/card_square1_2494_evolution.png"></div>
+<div class="right"><h2>Past, Present and...</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>HiMERU, Rinne, Niki, Kohaku</p>
+</div></div>
+</div>
+
+<div class="item idol undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902938084483143/card_square1_2495_normal.png"></div>
+<div class="right"><h2>ACT Plan T to K</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Kaoru, Tomoya</p>
+</div></div>
+</div>
+
+<div class="item idol eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902952194113536/card_square1_2496_normal.png"></div>
+<div class="right"><h2>A Trip Down Memory Lane</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Jun, Kohaku, Hiyori</p>
+</div></div>
+</div>
+
+<div class="item idol aktk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053902951866978314/card_square1_2497_normal.png"></div>
+<div class="right"><h2>As Big Brothers</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Kuro, Madara</p>
+</div></div>
+</div>
+
+<div class="item feature aktk summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050253402430509066/fq5qu6d.png"></div>
+<div class="right"><h2>After the Summer Rain</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Souma, Keito</p>
+<a href="https://verdantgrove.dreamwidth.org/2325.html">Translation by verdantgrove (Ch 1)</a>
+<a href="https://verdantgrove.dreamwidth.org/2672.html">Translation by verdantgrove (Ch 2)</a></div></div>
+</div>
+
+<div class="item idol switch summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053940242526240818/card_square1_2511_normal.png"></div>
+<div class="right"><h2>The Magician's Delivery</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Natsume, Adonis, Niki</p>
+</div></div>
+</div>
+
+<div class="item idol alk summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1112290279920246815/card_square1_2512_normal.png"></div>
+<div class="right"><h2>Do the Norm</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Aira, Chiaki, Midori</p>
+<a href="https://310mc.github.io/do_the_norm/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item idol alk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053940263107710996/card_square1_2513_normal.png"></div>
+<div class="right"><h2>Weekend's Confession Booth</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tatsumi, Aira, Mayoi</p>
+</div></div>
+</div>
+
+<div class="item feature rst tl summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903022910087198/card_square1_2523_evolution.png"></div>
+<div class="right"><h2>Dear Me, Before I Became a Ninja</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Shinobu, Tetora, Tsukasa</p>
+<a href="https://310mc.github.io/dear_me_before_i_became_a_ninja/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item idol rst tl summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903032942870641/card_square1_2524_normal.png"></div>
+<div class="right"><h2>Always Hold a Heroic Heart</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Chiaki, Kanata</p>
+<a href="https://310mc.github.io/always_hold_a_heroic_heart/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item idol fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903072352542760/card_square1_2525_normal.png"></div>
+<div class="right"><h2>The Young Master's Moving Out</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Yuzuru, Tori, Mitsuru, Midori</p>
+</div></div>
+</div>
+
+<div class="item idol eden summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903072075722813/card_square1_2526_evolution.png"></div>
+<div class="right"><h2>In the Niki of Time!</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Niki, Hiiro</p>
+</div></div>
+</div>
+
+<div class="item feature knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903116803788931/card_square1_2537_evolution.png"></div>
+<div class="right"><h2>I'm Just Me</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Arashi, Tsukasa, Ritsu, Mika</p>
+</div></div>
+</div>
+
+<div class="item idol aktk summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050253402799616050/9OybHTC.png"></div>
+<div class="right"><h2>The Case of the Missing Glasses</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Keito, Koga, Nazuna</p>
+<a href="https://mizuhanome-tl.dreamwidth.org/2774.html">Translation by Sei</a></div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903146633658368/card_square1_2539_normal.png"></div>
+<div class="right"><h2>From the Flower Capital</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Izumi, Shu</p>
+</div></div>
+</div>
+
+<div class="item idol switch summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903146335871016/card_square1_2540_evolution.png"></div>
+<div class="right"><h2>To The Place Under the Sun</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tsumugi, Ritsu, Rei</p>
+</div></div>
+</div>
+
+<div class="item feature rabits summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050253278375591936/0xmmZTF.png"></div>
+<div class="right"><h2>To the Deutzia-Colored You</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tomoya, Hajime, Hokuto, Arashi, Keito, Wataru</p>
+<a href="https://tomoya.moe/tl/idol_story/tomoya/to_the_deutzia-colored_you">Translation by Ren</a></div></div>
+</div>
+
+<div class="item idol 2wink summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050253278698545253/EM313T2.png"></div>
+<div class="right"><h2>Doubt Doubt Doubt</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Yuta, Hinata, HIMERU, Rinne, Niki</p>
+<a href="https://twilightmalachite.tumblr.com/doubtdoubtdoubt">Translation by Mika Enstars</a></div></div>
+</div>
+
+<div class="item idol rabits summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903239130656788/card_square1_2555_normal.png"></div>
+<div class="right"><h2>A World 1-cm Higher</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mitsuru, Kohaku</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903238757355540/card_square1_2556_evolution.png"></div>
+<div class="right"><h2>Curious About...?</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Leo, Nazuna, Natsume</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903267995861032/card_square1_2565_evolution.png"></div>
+<div class="right"><h2>As a Knight, As a King</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Tsukasa, Keito, Shinobu, Souma</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903278020243486/card_square1_2566_normal.png"></div>
+<div class="right"><h2>Melody</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Ritsu, Arashi, Tsukasa</p>
+</div></div>
+</div>
+
+<div class="item idol rst summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903298974990346/card_square1_2567_normal.png"></div>
+<div class="right"><h2>Something Dubious in the Library</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Chiaki, Hajime, Tsumugi</p>
+<a href="https://310mc.github.io/something_dubious_in_the_library/">Translation by 310mc1</a></div></div>
+</div>
+
+<div class="item idol rst tl summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050253279008936026/f16MF7L.png"></div>
+<div class="right"><h2>Both People And Fish</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Kanata, Kaoru, Souma</p>
+<a href="https://verdantgrove.dreamwidth.org/6265.html">Translation by verdantgrove</a></div></div>
+</div>
+
+<div class="item feature fine summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903329006190592/card_square1_2577_evolution.png"></div>
+<div class="right"><h2>That Which is Reflected in Your Eyes</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Wataru, Eichi, Tori, Yuzuru, Keito, Leo, Tomoya</p>
+</div></div>
+</div>
+
+<div class="item idol undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903340553109514/card_square1_2578_normal.png"></div>
+<div class="right"><h2>Return of the Demon King</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Rei, Adonis, Hinata, Yuta</p>
+</div></div>
+</div>
+
+<div class="item idol valkyrie rl summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1050272530755244032/card_square1_2579_normal.png"></div>
+<div class="right"><h2>Oshisan Ban</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mika, Arashi</p>
+<a href="https://fleetingmelody.dreamwidth.org/18403.html">Translation by FleetingMelody</a>
+</div></div>
+</div>
+
+<div class="item idol crazyb summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903366104817694/card_square1_2580_normal.png"></div>
+<div class="right"><h2>Like Comparing Cherry Blossoms</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Kohaku, Hajime, Tsukasa</p>
+<a href="https://machifuwa.tumblr.com/post/704982416207609856/">Translation by machi</a>
+</div></div>
+</div>
+
+<div class="item feature valkyrie summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903437894529077/card_square1_2593_evolution.png"></div>
+<div class="right"><h2>Distant Haute Couture</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Shu, Mika, Kuro</p>
+</div></div>
+</div>
+
+<div class="item idol alk summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903442596347924/card_square1_2594_normal.png"></div>
+<div class="right"><h2>The Cook of Many Orders</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mayoi, Niki, Shinobu</p>
+</div></div>
+</div>
+
+<div class="item idol trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053903469301477427/card_square1_2595_normal.png"></div>
+<div class="right"><h2>Taking a Page Out of a Student's Life</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Hokuto, Subaru, Yuzuru, Mao</p>
+</div></div>
+</div>
+
+<div class="item idol knights summer tl">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1051721819922640987/card_square1_2596_normal.png"></div>
+<div class="right"><h2>Maiden's Time</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Arashi, Tetora, HiMERU</p>
+<a href="https://stcrchives.tumblr.com/post/712554636913098752/">Translation by feesh</a></div></div>
+</div>
+
+<div class="item feature crazyb summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053906366378553465/card_square1_3263_evolution.png"></div>
+<div class="right"><h2>The Bee's Knees</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Rinne, Hiiro, Niki</p>
+</div></div>
+</div>
+
+<div class="item idol undead summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053938171764822046/card_square1_2603_normal.png"></div>
+<div class="right"><h2>The Rhythm Link Arm Wrestling Cup</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Adonis, Koga, Rei, Kaoru, Hajime, Tomoya, Keito</p>
+</div></div>
+</div>
+
+<div class="item idol trickstar summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053938246230487050/card_square1_2604_normal.png"></div>
+<div class="right"><h2>A Student Council President's Recreation</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Mao, Eichi, Aira</p>
+</div></div>
+</div>
+
+<div class="item idol mam summer">
+<div class="box"><div class="left"><img src="https://cdn.discordapp.com/attachments/1050218872395018344/1053938254702977034/card_square1_2605_normal.png"></div>
+<div class="right"><h2>Dolphin Song</h2>
+<i>Yuumasu (ゆーます)</i>
+<p><b>Characters: </b>Madara, Kanata</p>
+</div></div>
+</div>
+
+</section>
+<!-- GRID ENDS -->
+<!-- credit: DO NOT TOUCH -->
+<a href="https://enbythemes.tumblr.com" class="crd" title="code by rou"><i class="ph-sketch-logo"></i></a>
+</body>
+</html>
