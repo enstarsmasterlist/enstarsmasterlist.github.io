@@ -250,12 +250,13 @@
       }
 
       @media only screen and (max-width: 1023px) {
-        .mobile-controls {display: block;}
-        .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
+        .mobile-controls {display: block; font-size: 10px;}
+        div#banner {font-size: 10px}
     }
 
     @media only screen and (max-width: 390px) {
-        div#banner {padding: 12px;}}
+        div#banner {font-size: 10px;}
+    }
 
     /* credit: DO NOT TOUCH */
     .crd {
