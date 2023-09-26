@@ -221,19 +221,31 @@
         color: var(--drk-accent);
     }
     
-    div#banner { 
+  div#banner { 
         position: absolute; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0; 
-        left: 0; 
         background-color: var(--accent); 
         width: 100%; 
         font-size: 12px;
       }
       div#banner-content { 
-        width: 1000px; 
-        margin: 0 350px; 
+        width: 780px; 
         padding: 3px; 
+        text-align: center;
       }
+
+      @media only screen and (max-width: 1023px) {
+        .mobile-controls {display: block;}
+        div#banner {font-size: 10px}
+    }
+
+    @media only screen and (max-width: 390px) {
+        .mobile-controls {display: block;} 
+        div#banner {font-size: 10px;}
+    }
 
     /* credit: DO NOT TOUCH */
     .crd {
