@@ -221,7 +221,7 @@
         color: var(--drk-accent);
     }
     
-  div#banner { 
+    div#banner { 
         position: absolute; 
         display: flex;
         justify-content: center;
