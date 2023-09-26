@@ -235,17 +235,27 @@
     
     div#banner { 
         position: absolute; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0; 
-        left: 0; 
         background-color: var(--accent); 
         width: 100%; 
         font-size: 12px;
       }
       div#banner-content { 
-        width: 1000px; 
-        margin: 0 350px; 
+        width: 780px; 
         padding: 3px; 
+        text-align: center;
       }
+
+      @media only screen and (max-width: 1023px) {
+        .mobile-controls {display: block;}
+        .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
+    }
+
+    @media only screen and (max-width: 390px) {
+        div#banner {padding: 12px;}}
 
     /* credit: DO NOT TOUCH */
     .crd {
