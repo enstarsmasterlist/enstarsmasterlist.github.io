@@ -100,10 +100,10 @@
     }
     
     .filters {
-    width: calc(100% - 130px - 1.25em - 35px);
-    height: 100%;
+    width: flex;
+    height: flex;
     max-height: 200px;
-    padding: 4px 10px;
+    padding: 4px 16px;
     overflow: scroll;
     
     }
@@ -115,12 +115,13 @@
     .selected {font-weight: bold; border-bottom: 2px solid var(--accent);}
 
     .charafilters {
-    width: calc(100% - 130px - 1.25em - 35px);
-    height: 100%;
-    max-height: 120px;
+    width: flex;
+    height: flex;
+    max-height: 100px;
     padding: 4px 10px;
     overflow: scroll;
-    margin-top: 5px
+    margin-top: 5px;
+    margin-bottom: 5px;
     
     }
     
@@ -313,7 +314,8 @@
     /* MEDIA QUERIES FOR RESPONSIVENESS */
     @media only screen and (max-width: 720px) {
     header {width: 100%;}
-    .filters .charafilters {width: calc(100% - 130px - 1.25em - 80px);}
+    .filters {width: flex; margin-right: 20px;}
+    .charafilters {width: flex; margin-right: 20px;}
     .grid .item {width: 48%; display: inline-block;}
     }
     
