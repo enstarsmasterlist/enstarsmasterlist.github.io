@@ -32,9 +32,14 @@
     body.night a {color: var(--drk-accent);}
     
     body.night .links a, body.night .filters {background: var(--drk-header);}
+    body.night .links a, body.night .charafilters {background: var(--drk-header);}
     body.night .filters a {color:var(--drk-font);}
+    body.night .charafilters a {color:var(--drk-font);}
     
     body.night .links a, body.night .filters, body.night .grid .item {
+    border: 1px solid var(--drk-borders);}
+
+    body.night .links a, body.night .charafilters, body.night .grid .item {
     border: 1px solid var(--drk-borders);}
     
     body.night .item {background: var(--drk-box);}
