@@ -354,64 +354,67 @@ localStorage.setItem("theme", theme);
 <a class="lightswitch"><i class="ph-moon-fill"></i></a>
 </div>
 
-<div class="filters">
+<div id="filters-container">
 
-<ul class="filter option-set exclusive" data-filter-group="gen">
-<li class="filter option-set exclusive"><a href="#" data-filter-value="" class="reset selected">All</a></li> <!-- IMPROTANT! make sure not to delete! -->
-<li class="filter option-set exclusive"><a href="#" data-filter-value=".tl">TL Available</a></li>
-</ul>
+    <div class="filters">
+        <ul class="filter option-set exclusive" data-filter-group="gen">
+        <li class="filter option-set exclusive"><a href="#" data-filter-value="" class="reset selected">All</a></li> <!-- IMPROTANT! make sure not to delete! -->
+        <li class="filter option-set exclusive"><a href="#" data-filter-value=".tl">TL Available</a></li>
+        </ul>
 
-<ul class="filter option-set" data-filter-group="era">
-<li><b>ERA</b></li>
-<li><a href="#" data-filter-value="" class="selected">All</a></li>
-<li><a href="#" data-filter-value=".first">! Era</a></li>
-<li><a href="#" data-filter-value=".second">!! Era</a></li>
-</ul>
+        <ul class="filter option-set" data-filter-group="era">
+        <li><b>ERA</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".first">! Era</a></li>
+        <li><a href="#" data-filter-value=".second">!! Era</a></li>
+        </ul>
 
-<ul class="filter option-set" data-filter-group="type">
-<li><b>STORY TYPE</b></li>
-<li><a href="#" data-filter-value="" class="selected">All</a></li>
-<li><a href="#" data-filter-value=".main">Main</a></li>
-<li><a href="#" data-filter-value=".event">Event</a></li>
-<li><a href="#" data-filter-value=".scout">Scout</a></li>
-</ul>
+        <ul class="filter option-set" data-filter-group="type">
+        <li><b>STORY TYPE</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".main">Main</a></li>
+        <li><a href="#" data-filter-value=".event">Event</a></li>
+        <li><a href="#" data-filter-value=".scout">Scout</a></li>
+        </ul>
 
-<ul class="filter option-set" data-filter-group="unit">
-<li><b>UNIT</b></li>
-<li><a href="#" data-filter-value="" class="selected">All</a></li>
-<li><a href="#" data-filter-value=".fine">fine</a></li>
-<li><a href="#" data-filter-value=".trickstar">Trickstar</a></li>
-<li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
-<li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
-<li><a href="#" data-filter-value=".eden">Eden</a></li>
-<li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
-<li><a href="#" data-filter-value=".2wink">2wink</a></li>
-<li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
-<li><a href="#" data-filter-value=".undead">UNDEAD</a></li>
-<li><a href="#" data-filter-value=".rabits">Ra*bits</a></li>
-<li><a href="#" data-filter-value=".aktk">AKATSUKI</a></li>
-<li><a href="#" data-filter-value=".knights">Knights</a></li>
-<li><a href="#" data-filter-value=".switch">Switch</a></li>
-<li><a href="#" data-filter-value=".mam">MaM</a></li>
-<li><a href="#" data-filter-value=".df">Double Face</a></li>
-</ul>
+        <ul class="filter option-set" data-filter-group="unit">
+        <li><b>UNIT</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".fine">fine</a></li>
+        <li><a href="#" data-filter-value=".trickstar">Trickstar</a></li>
+        <li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
+        <li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
+        <li><a href="#" data-filter-value=".eden">Eden</a></li>
+        <li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
+        <li><a href="#" data-filter-value=".2wink">2wink</a></li>
+        <li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
+        <li><a href="#" data-filter-value=".undead">UNDEAD</a></li>
+        <li><a href="#" data-filter-value=".rabits">Ra*bits</a></li>
+        <li><a href="#" data-filter-value=".aktk">AKATSUKI</a></li>
+        <li><a href="#" data-filter-value=".knights">Knights</a></li>
+        <li><a href="#" data-filter-value=".switch">Switch</a></li>
+        <li><a href="#" data-filter-value=".mam">MaM</a></li>
+        <li><a href="#" data-filter-value=".df">Double Face</a></li>
+        </ul>
 
-<ul class="filter option-set" data-filter-group="season">
-<li><b>SEASON</b></li>
-<li><a href="#" data-filter-value="" class="selected">All</a></li>
-<li><a href="#" data-filter-value=".spring">Spring</a></li>
-<li><a href="#" data-filter-value=".summer">Summer</a></li>
-<li><a href="#" data-filter-value=".autumn">Autumn</a></li>
-<li><a href="#" data-filter-value=".winter">Winter</a></li>
-<li><a href="#" data-filter-value=".nextspring">Spring (Following Year)</a></li>
-</ul>
+        <ul class="filter option-set" data-filter-group="season">
+        <li><b>SEASON</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".spring">Spring</a></li>
+        <li><a href="#" data-filter-value=".summer">Summer</a></li>
+        <li><a href="#" data-filter-value=".autumn">Autumn</a></li>
+        <li><a href="#" data-filter-value=".winter">Winter</a></li>
+        <li><a href="#" data-filter-value=".nextspring">Spring (Following Year)</a></li>
+        </ul>
 
-<ul class="filter option-set" id="character-filter" data-filter-group="character">
-    <li><b>CHARACTER</b></li>
-    <li><a href="#" data-filter-value="" class="selected">All</a></li>
-</ul>
+    </div>
 
-
+    <div class="filters">
+        <ul class="filter option-set" id="character-filter" data-filter-group="character">
+            <li><b>CHARACTER</b></li>
+            <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        </ul>
+    </div>
 </div>
 </header>
 <!-- HEADER ENDS -->
