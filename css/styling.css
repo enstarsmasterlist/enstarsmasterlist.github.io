@@ -147,7 +147,7 @@
     border: 1px solid var(--borders);
     border-radius: 5px;
     min-width: 32%;
-    max-width: 430px;
+    max-width: 700px;
     overflow: hidden
     }
     
@@ -313,16 +313,17 @@
     .tmblr-iframe--app-cta-button {display:none!important;}
     
     /* MEDIA QUERIES FOR RESPONSIVENESS */
-    @media only screen and (max-width: 720px) {
+    @media only screen and (max-width: 1023px) {
     header {width: 100%;}
     .filters {width: flex; margin-right: 20px;}
     .charafilters {width: flex; margin-right: 20px;}
     .item {width: 48%; display: inline-block;}
     }
     
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
     header {width: 100%; }
     .item {width: 100%; display: inline-block; margin: 1% 0;}
+    .item img {height: 380px}
     }
     
     
