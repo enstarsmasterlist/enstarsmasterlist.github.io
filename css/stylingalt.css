@@ -36,10 +36,10 @@
     body.night .filters a {color:var(--drk-font);}
     body.night .charafilters a {color:var(--drk-font);}
     
-    body.night .links a, body.night .filters, body.night .grid .item {
+    body.night .links a, body.night .filters, body.night .item {
     border: 1px solid var(--drk-borders);}
 
-    body.night .links a, body.night .charafilters, body.night .grid .item {
+    body.night .links a, body.night .charafilters, body.night .item {
     border: 1px solid var(--drk-borders);}
     
     body.night .item {background: var(--drk-box);}
@@ -137,7 +137,7 @@
     margin: 0 auto 25px;
     }
     
-    .grid .item {
+    .item {
     display: block;
     background: var(--box);
     margin: .5%;
@@ -257,6 +257,7 @@
         background-color: var(--accent); 
         width: 100%; 
         font-size: 12px;
+        z-index: 100;
       }
       div#banner-content { 
         width: 780px; 
@@ -303,12 +304,12 @@
     header {width: 100%;}
     .filters {width: flex; margin-right: 20px;}
     .charafilters {width: flex; margin-right: 20px;}
-    .grid .item {width: 48%; display: inline-block;}
+    .item {width: 48%; display: inline-block;}
     }
     
     @media only screen and (max-width: 600px) {
     header {width: 100%; }
-    .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+    .item {width: 100%; display: inline-block; margin: 1% 0;}
     }
     
     
