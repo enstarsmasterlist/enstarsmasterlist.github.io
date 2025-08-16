@@ -400,7 +400,7 @@
 
 .expandable-section.expanded .expandable-content {
   display: block;
-  max-height: 1000px;
+  max-height: 100%;
   z-index: 2;
 }
 
