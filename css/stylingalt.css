@@ -28,6 +28,11 @@
     }
     
     /* DARK MODE STYLING */
+    body.night  div#banner { 
+      background-color: var(--drk-box);
+      color: var(--drk-font)
+    }
+    
     body.night {background: var(--drk-bg); color: var(--drk-font);}
     body.night a {color: var(--drk-accent);}
     

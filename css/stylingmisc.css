@@ -32,7 +32,7 @@
       background-color: var(--drk-box);
       color: var(--drk-font)
     }
-    
+
     body.night {background: var(--drk-bg); color: var(--drk-font);}
     body.night a {color: var(--drk-accent);}
     
@@ -41,17 +41,33 @@
     body.night .filters a {color:var(--drk-font);}
     body.night .charafilters a {color:var(--drk-font);}
     
-    body.night .links a, body.night .filters, body.night .item {
+    body.night .links a, body.night .filters, body.night .grid .item {
     border: 1px solid var(--drk-borders);}
 
-    body.night .links a, body.night .charafilters, body.night .item {
+    body.night .links a, body.night .charafilters, body.night .grid .item {
     border: 1px solid var(--drk-borders);}
     
     body.night .item {background: var(--drk-box);}
     body.night .item a {background: var(--drk-accent); color: var(--drk-font);}
     
     body.night .item a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
+
+    body.night .item .expandable-section .fade {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--drk-box));
+    }
     
+    body.night .item .expand-btn {
+    color: #ccc;
+    }
+
+   body.night .item span {
+    color: var(--accent);
+    }
+
+    body.night .item .expand-btn:hover {
+  color: rgb(255, 255, 255);
+    }
+
     a {
     text-decoration: none;
     color: var(--accent);
@@ -87,7 +103,7 @@
     border-radius: 8px;
     }
     
-    .links {margin: 0 15px;}
+    .links {margin: 0 15px; text-align: center;}
     
     .links a {
     background: var(--header);
@@ -95,8 +111,8 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 18px;
-    display: flex;
-    margin-bottom: 10px;
+    display: inline-block;
+    margin: 10px 10px auto;
     }
     
     .links a:hover {
@@ -143,17 +159,20 @@
     margin: 0 auto 25px;
     }
     
-    .item {
+    .grid .item {
     display: block;
     background: var(--box);
     margin: .5%;
-    width: 25%;
+    width: 65%;
     box-sizing: border-box;
     border: 1px solid var(--borders);
     border-radius: 5px;
-    min-width: 32%;
-    max-width: 430px;
-    overflow: hidden
+    min-width: 49%;
+    width: 25%;
+    overflow: hidden;
+
+    height: 450px;
+    overflow: hidden;
     }
     
     .item h2 {margin: 0 0 5px;}
@@ -195,14 +214,18 @@
     width: 100%;
     padding: 15px;
     margin: 1;
-    flex: 3 3 250px;
+    flex: 4 4 350px;
+    overflow-y: scroll;
+    height: 410px;
     }
     
     .left {
-    height: 101%;
-    width: 70%;
-    flex: 1 0 100px;
+    margin: 10px 10px 0px;
+    flex: 200px 1 1;
+    position: relative;
+    height:438px
     }
+
     
     .item h2 {margin: 5px 0 5px; color: var(--accent);}
     .item b {color: var(--accent);}
@@ -224,8 +247,9 @@
         display: block;
         max-width: 101%;
         object-fit: cover;
-        height: 340px
-    }
+        height: 450px;
+        position:absolute; bottom:0; left:0
+      }
     
     
     h3 {
@@ -235,14 +259,12 @@
        line-height: 0.1em;
        margin: 0 auto;
        margin-top: 1em;
-       padding:0 15px;
     }
     
     h3 span {
         background:#fff;
         padding:0 15px;
-        color: var(--accent);
-        font-size: 0.85em;
+        color: var(--font);
     }
     
     table#info {
@@ -255,7 +277,6 @@
       width: 100%;
       font-size: 0.9em;
     }
-    
     
     body.night table#info {
         background-color: var(--drk-bg);
@@ -276,7 +297,6 @@
         background-color: var(--accent); 
         width: 100%; 
         font-size: 12px;
-        z-index: 100;
       }
       div#banner-content { 
         width: 780px; 
@@ -319,28 +339,109 @@
     .tmblr-iframe--app-cta-button {display:none!important;}
     
     /* MEDIA QUERIES FOR RESPONSIVENESS */
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
     header {width: 100%;}
     .filters {width: flex; margin-right: 20px;}
     .charafilters {width: flex; margin-right: 20px;}
-    .item {width: 48%; display: inline-block;}
+    .grid .item {width: 48%; display: inline-block;}
     }
     
-    @media only screen and (max-width: 700px) {
-    .left {
-    height: 101%;
-    width: 70%;
-    flex: 1 1 100px;
-    }
-    }
-
-
     @media only screen and (max-width: 600px) {
     header {width: 100%; }
-    .item {width: 100%; display: inline-block; margin: 1% 0;}
-    .item img {height: 380px}
+    .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+    .left {flex: 1 1 100px;}
     }
     
-    
-       
+/* WHOLE EXPANDABLE SECTION (Includes both 1) the button and 2) the content that's under "Expand More") */
+.expandable-section {
+  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 50px; /*This keeps sections like "Birthday" and "Miscellaneous" from being right beneath the "Expand More" button*/
+}
+
+/* 1) BUTTON */
+.expand-btn-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.expand-btn {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  color: rgb(34, 38, 47);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+
+.expand-btn:hover {
+  color: rgb(12, 127, 159);
+}
+
+/* 2) EXPANDABLE CONTENT */
+.expandable-content {
+  display: none;
+  max-height: 0; /*display:none and max height:0 keeps it undisplayed at first*/
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.expandable-section.expanded .expandable-content {
+  display: block;
+  max-height: 1000px;
+  z-index: 2;
+}
+
+/* TRANSLATION LINKS (code is same as ".item a" code) */
+.expandable-section a {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  padding: 6px 8px;
+  margin: 1px auto;
+  border-radius: 3px;
+  border: 1px solid var(--accent);
+  color: var(--bg);
+  z-index: 10;
+}
+
+.expandable-section a:hover {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.expandable-section .fade {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--bg));
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Fade goes away when you expand it */
+.expandable-section.expanded .fade {
+  opacity: 0;
+}
+
+.expandable-section.expanded {
+  padding-top: 40px; /* This makes it so you can see "Show Less" when it's expanded. If this were 0, it would be buried under the links */
+}
     
