@@ -60,6 +60,15 @@
     color: #ccc;
     }
 
+    body.night .dropdown-content {
+      background-color: var(--drk-bg);
+    }
+
+    body.night .dropdown-content a {
+      color: var(--drk-font); 
+      background: var(--drk-accent);
+    }
+
    body.night .item span {
     color: var(--accent);
     }
@@ -260,7 +269,8 @@
        margin: 0 auto;
        margin-top: 1em;
     }
-    
+  
+
     h3 span {
         background:#fff;
         padding:0 15px;
