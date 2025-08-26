@@ -311,6 +311,10 @@
   padding-bottom: 5px;
 }
 
+.lightswitch:hover {
+cursor: pointer;
+}
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: var(--font); 
