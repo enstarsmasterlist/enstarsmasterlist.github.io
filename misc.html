@@ -158,7 +158,62 @@ localStorage.setItem("theme", theme);
 
     </div>
 
+<style>
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+
 <div class="links">
+<!--<div class="dropdown">
+<a class="dropbtn" style="color: var(--accent);"><i class="ph ph-list-dashes"></i></a>
+<div class="dropdown-content">
+  <a href="https://enstarsmasterlist.github.io/scoutevent">Event & Scout Translations</a>
+  <a href="https://enstarsmasterlist.github.io/featureidol">Feature & Idol Translations</a>
+  <a href="https://enstarsmasterlist.github.io/misc">Miscellaneous Translations</a>
+</div>
+</div>
+
+will get back to this, you can delete it for now
+-->
 <a href="https://enstarsmasterlist.github.io/scoutevent"><i class="ph-arrow-bend-up-left"></i></a>
 <a href="https://enstarsmasterlist.github.io/featureidol"><i class="ph-arrow-bend-up-right"></i></a>
 <a href="https://retrospring.net/@enstarsML" target="_blank"><i class="ph-envelope-fill"></i></a>
@@ -184,20 +239,20 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/yumenosaki_christmas_party/#3-A-s-Christmas-Party-Part-1" target="_blank">2019 Yumenosaki Christmas Party 3-A Part 1 - Translation by 310mc</a>
 <a href="https://x.com/nenosuns/status/1609990068797640709" target="_blank">HAPPY NEW ENSEMBLE!!: Ring.A.Bell MC - Translation by Mia</a>
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/prologue" target="_blank">8th Anniversary Heart to you FES!! Prologue - Translation by raspberryjam</a>
-<a href="https://www.tumblr.com/verdantcrimson/731093266073862144/" target="_blank">8th Anniversary Heart to you FES!! 1 - Translation by verdantcrimson</a>
-<a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/8" target="_blank">8th Anniversary Heart to you FES!! 8 - Translation by raspberryjam</a>
-<a href="https://www.tumblr.com/verdantcrimson/731097026745532416/" target="_blank">8th Anniversary Heart to you FES!! 42 - Translation by verdantcrimson</a>
-
 <div class="expandable-section" id="eichi_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('eichi_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('eichi_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
+<a href="https://www.tumblr.com/verdantcrimson/731093266073862144/" target="_blank">8th Anniversary Heart to you FES!! 1 - Translation by verdantcrimson</a>
+<a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/8" target="_blank">8th Anniversary Heart to you FES!! 8 - Translation by raspberryjam</a>
+<a href="https://www.tumblr.com/verdantcrimson/731097026745532416/" target="_blank">8th Anniversary Heart to you FES!! 42 - Translation by verdantcrimson</a>
 <a href="https://aeoki.tumblr.com/tagged/fine%20trip%20album%20story/chrono" target="_blank">fine Album Release Commemoration Solo Live MC Segments - Translation by Creampuffs</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
 <a href="https://funbirdnest.tumblr.com/post/714306147193061376/" target="_blank">Short Story: Blackbird - Translation by Kanami</a>
+<button class="less-btn" onclick="toggleExpand('eichi_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -224,12 +279,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="wataru_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('wataru_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('wataru_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://aeoki.tumblr.com/tagged/fine%20trip%20album%20story/chrono" target="_blank">fine Album Release Commemoration Solo Live MC Segments - Translation by Creampuffs</a>
 <a href="https://funbirdnest.tumblr.com/post/714306147193061376/" target="_blank">Short Story: Blackbird - Translation by Kanami</a>
+<button class="less-btn" onclick="toggleExpand('wataru_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -248,16 +304,16 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tori_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tori_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tori_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://aeoki.tumblr.com/post/757787763456278528/" target="_blank">Management Story 4 (Makoto) - Translation by Creampuffs</a>
 <a href="https://southerngothics.neocities.org/tl/management/tori/sora" target="_blank">Management Story 5 (Sora) - Translation by ciel</a>
+          <button class="less-btn" onclick="toggleExpand('tori_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
-
 <p><h3><span>Mini Talks</span></h3></p>
 <a href="https://ensemble-stars.fandom.com/wiki/The_Flag%27s_Honor_%E2%9C%BB_Crowned_Flower_Festival/Tori_Himemiya_Normal_Event" target="_blank">Flower Festival: Miscalculation - Translation by Creampuffs</a>
 <p><h3><span>Birthday</span></h3></p>
@@ -270,7 +326,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tori_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tori_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tori_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -278,6 +334,7 @@ localStorage.setItem("theme", theme);
 <a href="https://aeoki.tumblr.com/tagged/fine%20trip%20album%20story/chrono" target="_blank">fine Album Release Commemoration Solo Live MC Segments - Translation by Creampuffs</a>
 <a href="https://twilightmalachite.tumblr.com/post/762131287013244928/" target="_blank">Memories Road: Class 1-B - Translation by Mika Enstars</a>
 <a href="https://310mc.github.io/sprinting/" target="_blank">SELECTION 10 UNIT: SPRINT・ING! Story</a>
+          <button class="less-btn" onclick="toggleExpand('tori_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -305,7 +362,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="yuzuru_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('yuzuru_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('yuzuru_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -314,6 +371,7 @@ localStorage.setItem("theme", theme);
 <a href="https://www.tumblr.com/verdantcrimson/731096564572012544/" target="_blank">8th Anniversary Heart to you FES!! 31 - Translation by verdantcrimson</a>
 <a href="https://aeoki.tumblr.com/tagged/fine%20trip%20album%20story/chrono" target="_blank">fine Album Release Commemoration Solo Live MC Segments - Translation by Creampuffs</a>
 <a href="https://nenosuns.wordpress.com/2024/09/17/enstars-memories-road-class-2-b/" target="_blank">Memories Road: Class 2-B - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('yuzuru_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -332,11 +390,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="hokuto_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hokuto_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('hokuto_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://southerngothics.neocities.org/tl/management/hokuto/souma" target="_blank">Management Story 5 (Souma) - Translation by ciel</a>
+          <button class="less-btn" onclick="toggleExpand('hokuto_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -353,11 +412,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="hokuto_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hokuto_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('hokuto_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://www.tumblr.com/verdantcrimson/731094830060634112/" target="_blank">8th Anniversary Heart to you FES!! 23 - Translation by verdantcrimson</a>
+          <button class="less-btn" onclick="toggleExpand('hokuto_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -413,7 +473,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mao_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mao_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mao_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -421,6 +481,7 @@ localStorage.setItem("theme", theme);
 <a href="https://nenosuns.wordpress.com/2022/09/16/isara-mao-management-stories/#izumi" target="_blank">Management Story 4 (Izumi) - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2022/09/16/isara-mao-management-stories/#yuzuru" target="_blank">Management Story 5 (Yuzuru) - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2022/09/16/isara-mao-management-stories/#koga" target="_blank">Management Story 6 (Koga) - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('mao_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -434,14 +495,15 @@ localStorage.setItem("theme", theme);
 <a href="https://finderyellow.tumblr.com/post/678917070372618240/" target="_blank">2021 Birthday Campaign - Translation by Katya</a>
 <a href="https://nenosuns.wordpress.com/2023/03/15/isara-mao-birthday-course-event-2023/" target="_blank">2022 Birthday Campaign - Translation by Mia</a>
 
-<div class="expandable-section" id="hokuto_bday">
+<div class="expandable-section" id="mao_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hokuto_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mao_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://nenosuns.wordpress.com/2024/03/15/isara-mao-birthday-course-event-2024/" target="_blank">2023 Birthday Campaign - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('mao_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -454,7 +516,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mao_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mao_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mao_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -465,6 +527,7 @@ localStorage.setItem("theme", theme);
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/8" target="_blank">8th Anniversary Heart to you FES!! 8 - Translation by raspberryjam</a>
 <a href="https://nenosuns.wordpress.com/2024/09/17/enstars-memories-road-class-2-b/" target="_blank">Memories Road: Class 2-B - Translation by Mia</a>
 <a href="https://310mc.github.io/mode_d/" target="_blank">NICE DREAM UNIT: MODE/D Story</a>
+          <button class="less-btn" onclick="toggleExpand('mao_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -483,7 +546,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tetora_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tetora_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tetora_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -493,6 +556,7 @@ localStorage.setItem("theme", theme);
 <a href="https://southerngothics.neocities.org/tl/management/tetora/tomoya" target="_blank">Management Story 5 (Tomoya) - Translation by ciel</a>
 <a href="https://twilightmalachite.tumblr.com/post/660080521603416064/" target="_blank">Management Story 6 (Hinata) - Translation by Mika Enstars</a>
 <a href="https://southerngothics.neocities.org/tl/management/tetora/hinata" target="_blank">Management Story 6 (Hinata) - Translation by ciel</a>
+          <button class="less-btn" onclick="toggleExpand('tetora_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -505,7 +569,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tetora_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tetora_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tetora_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -522,8 +586,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/minitalk/tetora_2/" target="_blank">WILDLAND: Stylish Sports Equipment - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_follow/" target="_blank">Mega Stream Course: Follow! RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_thursday/" target="_blank">Mega Stream Course: Thursday Course RYUSEITAI - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('tetora_mini')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -535,7 +599,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tetora_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tetora_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tetora_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -545,8 +609,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/birthday_story/tetora/2023/" target="_blank">2023 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/tetora/2024/" target="_blank">2024 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/tetora/2025/" target="_blank">2025 Birthday Campaign - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('tetora_bday')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -558,7 +622,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tetora_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tetora_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tetora_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -572,8 +636,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/anniversary/9th/" target="_blank">9th Anniversary: RYUSEITAI - Translation by 310mc</a>
 <a href="https://twilightmalachite.tumblr.com/post/762131033811468288/" target="_blank">Memories Road: Class 1-A - Translation by Mika Enstars</a>
 <a href="https://310mc.github.io/anniversary/10th/" target="_blank">10th Anniversary: RYUSEITAI - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('tetora_misc')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -591,13 +655,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="midori_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('midori_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('midori_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://310mc.github.io/management_story/midori/#With-Tetora" target="_blank">Management Story 4 (Tetora) - Translation by 310mc</a>
 <a href="https://310mc.github.io/management_story/midori/#With-Shinobu" target="_blank">Management Story 5 (Shinobu) - Translation by 310mc</a>
 <a href="https://310mc.github.io/management_story/midori/#With-Yuta" target="_blank">Management Story 6 (Yuta) - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('midori_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -610,7 +675,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="midori_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('midori_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('midori_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -633,8 +698,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/minitalk/shinobu_2/" target="_blank">WILDLAND: Bouldering Skills - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_follow/" target="_blank">Mega Stream Course: Follow! RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_thursday/" target="_blank">Mega Stream Course: Thursday Course RYUSEITAI - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('midori_mini')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -646,7 +711,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="midori_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('midori_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('midori_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -654,8 +719,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/birthday_story/midori/2022/" target="_blank">2022 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/midori/2023/" target="_blank">2023 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/midori/2024/" target="_blank">2024 Birthday Campaign - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('midori_bday')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -667,7 +732,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="midori_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('midori_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('midori_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -683,8 +748,8 @@ localStorage.setItem("theme", theme);
 <a href="https://twilightmalachite.tumblr.com/post/762131033811468288/" target="_blank">Memories Road: Class 1-A - Translation by Mika Enstars</a>
 <a href="https://310mc.github.io/anniversary/10th/" target="_blank">10th Anniversary: RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/sprinting/" target="_blank">SELECTION 10 UNIT: SPRINT・ING! Story</a>
+<button class="less-btn" onclick="toggleExpand('midori_misc')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -702,7 +767,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shinobu_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shinobu_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shinobu_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -711,8 +776,8 @@ localStorage.setItem("theme", theme);
 <a href="https://citrinesea.github.io/translation/shinobu_management_stories/#with-Nazuna" target="_blank">Management Story 4 (Nazuna) - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/shinobu_management_stories/#with-Yuuta" target="_blank">Management Story 5 (Yuuta) - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/shinobu_management_stories/#with-Souma" target="_blank">Management Story 6 (Souma) - Translation by citrinesea</a>
+<button class="less-btn" onclick="toggleExpand('shinobu_manage')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -724,7 +789,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shinobu_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shinobu_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shinobu_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -737,6 +802,7 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/minitalk/midori_2/" target="_blank">WILDLAND: Peculiar Illustration - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_follow/" target="_blank">Mega Stream Course: Follow! RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_thursday/" target="_blank">Mega Stream Course: Thursday Course RYUSEITAI - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('shinobu_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -749,7 +815,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shinobu_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shinobu_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shinobu_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -763,6 +829,7 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/birthday_story/shinobu/2023/" target="_blank">2023 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/shinobu/2024/" target="_blank">2024 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/shinobu/2025/" target="_blank">2025 Birthday Campaign - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('shinobu_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -775,7 +842,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shinobu_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shinobu_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shinobu_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -787,8 +854,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/anniversary/9th/" target="_blank">9th Anniversary: RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/anniversary/10th/" target="_blank">10th Anniversary: RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/sprinting/" target="_blank">SELECTION 10 UNIT: SPRINT・ING! Story</a>
+<button class="less-btn" onclick="toggleExpand('shinobu_misc')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -806,15 +873,15 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="chiaki_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('chiaki_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('chiaki_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://310mc.github.io/management_story/chiaki/#With-Midori" target="_blank">Management Story 4 (Midori) - Translation by 310mc</a>
 <a href="https://310mc.github.io/management_story/chiaki/#With-Kanata" target="_blank">Management Story 5 (Kanata) - Translation by 310mc</a>
 <a href="https://310mc.github.io/management_story/chiaki/#With-Keito" target="_blank">Management Story 6 (Keito) - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('chiaki_manage')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -826,7 +893,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="chiaki_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('chiaki_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('chiaki_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -857,8 +924,8 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/minitalk/mega_stream_thursday/" target="_blank">Mega Stream Course: Thursday Course RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/sailing_ceremony/minitalk/chiaki_1/" target="_blank">Sailing Ceremony: Happy News - Translation by 310mc</a>
 <a href="https://310mc.github.io/sailing_ceremony/minitalk/chiaki_2/" target="_blank">Sailing Ceremony: Looking for Takamine - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('chiaki_mini')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -870,13 +937,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="chiaki_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('chiaki_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('chiaki_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://310mc.github.io/birthday_story/chiaki/2022/" target="_blank">2022 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/chiaki/2023/" target="_blank">2023 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/chiaki/2024/" target="_blank">2024 Birthday Campaign - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('chiaki_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -889,7 +957,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="chiaki_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('chiaki_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('chiaki_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -906,6 +974,7 @@ localStorage.setItem("theme", theme);
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
 <a href="https://310mc.github.io/mode_d/" target="_blank">NICE DREAM UNIT: MODE/D Story</a>
 <a href="https://310mc.github.io/anniversary/10th/" target="_blank">10th Anniversary: RYUSEITAI - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('chiaki_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -926,7 +995,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kanata_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kanata_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kanata_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -937,6 +1006,7 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/minitalk/kanata_2/" target="_blank">WILDLAND: boasting one's strength - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_follow/" target="_blank">Mega Stream Course: Follow! RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/minitalk/mega_stream_thursday/" target="_blank">Mega Stream Course: Thursday Course RYUSEITAI - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('kanata_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -949,7 +1019,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kanata_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kanata_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kanata_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -957,8 +1027,8 @@ localStorage.setItem("theme", theme);
 <a href="https://nenosuns.wordpress.com/2022/08/29/shinkai-kanata-birthday-course-event-2022/" target="_blank">2022 Birthday Campaign - Translation by Mia</a>
 <a href="https://310mc.github.io/birthday_story/kanata/2023/" target="_blank">2023 Birthday Campaign - Translation by 310mc</a>
 <a href="https://310mc.github.io/birthday_story/kanata/2024/" target="_blank">2024 Birthday Campaign - Translation by 310mc</a>
+<button class="less-btn" onclick="toggleExpand('kanata_bday')">Show Less ▲</button>
 </div>
-
 <div class="fade"></div>
 </div>
 
@@ -970,7 +1040,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kanata_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kanata_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kanata_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -987,6 +1057,7 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/ryuseitai_album_trip/" target="_blank">RYUSEITAI Album TRIP - Translation by 310mc</a>
 <a href="https://310mc.github.io/anniversary/9th/" target="_blank">9th Anniversary: RYUSEITAI - Translation by 310mc</a>
 <a href="https://310mc.github.io/anniversary/10th/" target="_blank">10th Anniversary: RYUSEITAI - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('kanata_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1030,7 +1101,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mayoi_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mayoi_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mayoi_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1039,6 +1110,7 @@ localStorage.setItem("theme", theme);
 <a href="https://nenosuns.wordpress.com/2022/06/05/ayase-mayoi-birthday-course-event-2022/" target="_blank">2022 Birthday Campaign - Translation by Mia</a>
 <a href="https://x.com/tortranslates/status/1533464886403305472" target="_blank">2022 Birthday Campaign - Translation by Tor</a>
 <a href="https://southerngothics.neocities.org/tl/idol/mayoi/bday22/banquet-talk" target="_blank">2022 Birthday Campaign (Banquet Talk, Niki) - Translation by ciel</a>
+          <button class="less-btn" onclick="toggleExpand('mayoi_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1051,12 +1123,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mayoi_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mayoi_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mayoi_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://www.tumblr.com/verdantcrimson/731096771737075712/" target="_blank">8th Anniversary Heart to you FES!! 40 - Translation by verdantcrimson</a>
 <a href="https://x.com/sunnyskiestls/status/1806462128242778282" target="_blank">Oshi Room Q&A - Translation by sunnyskiestls</a>
+          <button class="less-btn" onclick="toggleExpand('mayoi_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1087,7 +1160,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="nagisa_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('nagisa_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('nagisa_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1096,6 +1169,7 @@ localStorage.setItem("theme", theme);
 <a href="https://landofzero-archive.tumblr.com/post/730128607253577728/" target="_blank">2×2: Expanding Interaction - Translation by landofzero</a>
 <a href="https://landofzero-archive.tumblr.com/post/730478705296752640/" target="_blank">Wedding March!: Mysterious Gaze - Translation by landofzero</a>
 <a href="https://landofzero-archive.tumblr.com/post/730479089136320512/" target="_blank">Wedding March!: The Charm of Walking Around Town - Translation by landofzero</a>
+          <button class="less-btn" onclick="toggleExpand('nagisa_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1110,13 +1184,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="nagisa_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('nagisa_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('nagisa_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://landofzero-archive.tumblr.com/post/724613460365901825/" target="_blank">Exciting! Enstars Seminar: Eden & Nagisa Ran Relationship Charts - Translation by landofzero</a>
 <a href="https://valentines0eve.wordpress.com/ensemble-stars-road-to-show-cast-commentary/" target="_blank">Ensemble Stars!! -Road to Show- Cast Commentary - Translation by Potay</a>
 <a href="https://landofzero-archive.tumblr.com/post/749989392849960960/" target="_blank">Eden Album Release Commemoration Solo Live MC Segments - Translation by landofzero</a>
+          <button class="less-btn" onclick="toggleExpand('nagisa_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1138,7 +1213,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="hiyori_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hiyori_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('hiyori_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1148,6 +1223,7 @@ localStorage.setItem("theme", theme);
 <a href="https://x.com/sunnyskiestls/status/1806462128242778282" target="_blank">Oshi Room Q&A - Translation by sunnyskiestls</a>
 <a href="https://landofzero-archive.tumblr.com/post/749989392849960960/" target="_blank">Eden Album Release Commemoration Solo Live MC Segments - Translation by landofzero</a>
 <a href="https://310mc.github.io/mode_d/" target="_blank">NICE DREAM UNIT: MODE/D Story</a>
+          <button class="less-btn" onclick="toggleExpand('hiyori_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1171,13 +1247,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="ibara_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('ibara_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('ibara_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://www.tumblr.com/verdantcrimson/731093998149812224/" target="_blank">8th Anniversary Heart to you FES!! 10 - Translation by verdantcrimson</a>
 <a href="https://www.tumblr.com/verdantcrimson/731096564572012544/" target="_blank">8th Anniversary Heart to you FES!! 31 - Translation by verdantcrimson</a>
 <a href="https://landofzero-archive.tumblr.com/post/749989392849960960/" target="_blank">Eden Album Release Commemoration Solo Live MC Segments - Translation by landofzero</a>
+          <button class="less-btn" onclick="toggleExpand('ibara_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1207,19 +1284,7 @@ localStorage.setItem("theme", theme);
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence_%EF%BC%8A_End_of_the_Marionette%27s_Strings/Shu_Itsuki_Normal_Event" target="_blank">Marionette: Aesthetics of the Sovereign - Translation by Creampuffs</a>
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence_%EF%BC%8A_End_of_the_Marionette%27s_Strings/Shu_Itsuki_Special_Event" target="_blank">Marionette: Shu and Mika - Translation by Creampuffs</a>
 <a href="https://raspberrytls.github.io/story/mini%20talk/raison%20d%C3%AAtre/directory.html" target="_blank">Raison d'être: Handmade Handkerchief & Toys and Childhood - Translation by raspberryjam</a>
-
-<div class="expandable-section" id="shu_mini">
-
-        <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shu_mini')">Expand for more ▼</button>
-        </div>
-
-<div class="expandable-content">
 <a href="https://raspberrytls.github.io/story/mini%20talk/limit%20break%20dreamers/directory.html target="_blank">LIMIT BREAK DREAMERS: Valkyrie - Translation by raspberryjam</a>
-</div>
-<div class="fade"></div>
-</div>
-
 <p><h3><span>Birthday</span></h3></p>
 <a href="https://southerngothics.neocities.org/tl/idol/shu/bday21/full" target="_blank">2021 Birthday Campaign - Translation by ciel</a>
 <a href="https://southerngothics.neocities.org/tl/idol/shu/bday22/banquet-talk" target="_blank">2022 Birthday Campaign (Banquet Talk, Kuro) - Translation by ciel</a>
@@ -1228,7 +1293,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shu_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shu_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shu_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1236,6 +1301,7 @@ localStorage.setItem("theme", theme);
 <a href="https://twilightmalachite.tumblr.com/post/732580129172242432/" target="_blank">2023 Birthday Mini Talks - Translation by Mika Enstars</a>
 <a href="https://raspberrytls.github.io/story/birthday/shu%202024/directory.html" target="_blank">2024 Birthday Campaign - Translation by raspberryjam</a>
 <a href="https://koou21.tumblr.com/shu_itsuki/birthday-2024" target="_blank">2024 Birthday Campaign - Translation by lukas</a>
+          <button class="less-btn" onclick="toggleExpand('shu_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1248,7 +1314,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="shu_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('shu_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('shu_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1260,6 +1326,7 @@ localStorage.setItem("theme", theme);
 <a href="https://raspberrytls.github.io/story/misc/oshi%20room/directory.html" target="_blank">Oshi Room - Translation by raspberryjam</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
 <a href="https://raspberrytls.github.io/story/misc/memory%20lane/3" target="_blank">Memories Road: Valkyrie - Translation by raspberryjam</a>
+          <button class="less-btn" onclick="toggleExpand('shu_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1278,12 +1345,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mika_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mika_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mika_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://whisperscrawls.dreamwidth.org/2827.html" target="_blank">Management Story 5 (Tsumugi) - Translation by Whisper</a>
 <a href="https://whisperscrawls.dreamwidth.org/3305.html" target="_blank">Management Story 6 (Kuro) - Translation by Whisper</a>
+          <button class="less-btn" onclick="toggleExpand('mika_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1298,13 +1366,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mika_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mika_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mika_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://raspberrytls.github.io/story/mini%20talk/raison%20d%C3%AAtre/directory.html" target="_blank">Raison d'être: Unexpected Free Time & Reason for Poor Condition - Translation by raspberryjam</a>
 <a href="https://raspberrytls.github.io/story/mini%20talk/limit%20break%20dreamers/directory.html target="_blank">LIMIT BREAK DREAMERS: Valkyrie - Translation by raspberryjam</a>
 <a href="https://raspberrytls.github.io/story/mini%20talk/hoshi%20no%20meido/directory.html" target="_blank">The Echo of a Star: Happily Creating Away & Getting Ready in a Flurry! - Translation by raspberryjam</a>
+          <button class="less-btn" onclick="toggleExpand('mika_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1321,7 +1390,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="mika_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('mika_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('mika_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1332,6 +1401,7 @@ localStorage.setItem("theme", theme);
 <a href="https://raspberrytls.github.io/story/misc/oshi%20room/directory.html" target="_blank">Oshi Room - Translation by raspberryjam</a>
 <a href="https://nenosuns.wordpress.com/2024/09/17/enstars-memories-road-class-2-b/" target="_blank">Memories Road: Class 2-B - Translation by Mia</a>
 <a href="https://raspberrytls.github.io/story/misc/memory%20lane/3" target="_blank">Memories Road: Valkyrie - Translation by raspberryjam</a>
+          <button class="less-btn" onclick="toggleExpand('mika_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1350,12 +1420,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="hinata_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hinata_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('hinata_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://310mc.github.io/management_story/hinata/#With-Chiaki" target="_blank">Management Story 4 (Chiaki) - Translation by 310mc</a>
 <a href="https://310mc.github.io/management_story/hinata/#With-Midori" target="_blank">Management Story 6 (Midori) - Translation by 310mc</a>
+          <button class="less-btn" onclick="toggleExpand('hinata_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1375,7 +1446,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="hinata_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('hinata_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('hinata_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1384,6 +1455,7 @@ localStorage.setItem("theme", theme);
 <a href="https://twilightmalachite.tumblr.com/post/736564134589710336/2" target="_blank">2wink Album Release Commemoration Solo Live MC Segments - Translation by Mika Enstars</a>
 <a href="https://twilightmalachite.tumblr.com/post/762131033811468288/" target="_blank">Memories Road: Class 1-A - Translation by Mika Enstars</a>
 <a href="https://310mc.github.io/sprinting/" target="_blank">SELECTION 10 UNIT: SPRINT・ING! Story</a>
+          <button class="less-btn" onclick="toggleExpand('hinata_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1406,11 +1478,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="yuta_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('yuta_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('yuta_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://southerngothics.neocities.org/tl/idol/yuuta/bday24/1" target="_blank">2023 Birthday Campaign Mini Talks - Translation by ciel</a>
+          <button class="less-btn" onclick="toggleExpand('yuta_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1435,12 +1508,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="rinne_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('rinne_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('rinne_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://landofzero-archive.tumblr.com/post/730924185957908480/" target="_blank">ES Fireworks Festival: Eve of the Fireworks Festival - Translation by landofzero</a>
 <a href="https://x.com/sunnyskiestls/status/1806462128242778282" target="_blank">Oshi Room Q&A - Translation by sunnyskiestls</a>
+          <button class="less-btn" onclick="toggleExpand('rinne_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1507,7 +1581,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="rei_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('rei_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('rei_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1517,6 +1591,7 @@ localStorage.setItem("theme", theme);
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/2" target="_blank">8th Anniversary Heart to you FES!! 2 - Translation by raspberryjam</a>
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/8" target="_blank">8th Anniversary Heart to you FES!! 8 - Translation by raspberryjam</a>
 <a href="https://mephinomaly.tumblr.com/post/736281425046814720/" target="_blank">Short Story: Backdoor - TL by mephinomaly</a>
+          <button class="less-btn" onclick="toggleExpand('rei_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1539,7 +1614,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kaoru_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kaoru_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kaoru_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1547,6 +1622,7 @@ localStorage.setItem("theme", theme);
 <a href="https://polyphonical.tumblr.com/post/728964939861180416/" target="_blank">8th Anniversary Heart to you FES!! 19 - Translation by Sunni</a>
 <a href="https://mephinomaly.tumblr.com/post/736281425046814720/" target="_blank">Short Story: Backdoor - TL by mephinomaly</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
+          <button class="less-btn" onclick="toggleExpand('kaoru_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1586,7 +1662,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="adonis_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('adonis_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('adonis_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1596,6 +1672,7 @@ localStorage.setItem("theme", theme);
 <a href="https://www.tumblr.com/verdantcrimson/731094222449541120/" target="_blank">8th Anniversary Heart to you FES!! 11 - Translation by verdantcrimson</a>
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/28" target="_blank">8th Anniversary Heart to you FES!! 28 - Translation by raspberryjam</a>
 <a href="https://www.tumblr.com/verdantcrimson/731096243172950016/" target="_blank">8th Anniversary Heart to you FES!! 28 - Translation by verdantcrimson</a>
+          <button class="less-btn" onclick="toggleExpand('adonis_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1687,7 +1764,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="keito_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('keito_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('keito_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1700,6 +1777,7 @@ localStorage.setItem("theme", theme);
 <a href="https://www.tumblr.com/verdantcrimson/725035118786428928/" target="_blank">Management Story 5 (Kaoru) - Translation by verdantcrimson</a>
 <a href="https://citrinesea.github.io/translation/keito_management_stories/#With-Madara" target="_blank">Management Story 6 (Madara) - Translation by citrinesea</a>
 <a href="https://www.tumblr.com/verdantcrimson/726131861164867584/" target="_blank">Management Story 6 (Madara) - Translation by verdantcrimson</a>
+          <button class="less-btn" onclick="toggleExpand('keito_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1708,19 +1786,21 @@ localStorage.setItem("theme", theme);
 <a href="https://ensemble-stars.fandom.com/wiki/The_Flag%27s_Honor_%E2%9C%BB_Crowned_Flower_Festival/Keito_Hasumi_Normal_Event" target="_blank">Flower Festival: The Vice Student Council President's Scheme - Translation by Creampuffs</a>
 <a href="https://ensemble-stars.fandom.com/wiki/The_Flag%27s_Honor_%E2%9C%BB_Crowned_Flower_Festival/Keito_Hasumi_Special_Event" target="_blank">Flower Festival: Powerful Personnel - Translation by Creampuffs</a>
 <a href="https://reikeip.tumblr.com/post/661498144300974080/" target="_blank">Learning from the Past: Unset Alarm - Translation by Soph</a>
+<a href="https://kuma829.tumblr.com/post/665500967105642497/" target="_blank">AKATSUKI Fusionic Stars Anniversary Minitalk - Translation by mano</a>
+<a href="https://x.com/hakirinezumi/status/1652313420849459200" target="_blank">8th Anniversary Mini Talk: AKATSUKI - Translation by Kirin</a>
+
 <div class="expandable-section" id="keito_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('keito_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('keito_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
-<a href="https://kuma829.tumblr.com/post/665500967105642497/" target="_blank">AKATSUKI Fusionic Stars Anniversary Minitalk - Translation by mano</a>
-<a href="https://x.com/hakirinezumi/status/1652313420849459200" target="_blank">8th Anniversary Mini Talk: AKATSUKI - Translation by Kirin</a>
 <a href="https://citrinesea.github.io/translation/shinsei_akatsuki_minitalks/" target="_blank">Rhythm Link Course (AKATSUKI) Talks - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_appeals/" target="_blank">Mega Stream Appeal Talks - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_minitalks/" target="_blank">Mega Stream Course: Follow! AKATSUKI - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_tuesday/" target="_blank">Mega Stream Course: Tuesday Course AKATSUKI - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('keito_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1736,7 +1816,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="keito_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('keito_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('keito_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1751,6 +1831,7 @@ localStorage.setItem("theme", theme);
 <a href="https://citrinesea.github.io/translation/oshi_room_2024/" target="_blank">Oshi Room Q&A (AKATSUKI) - Translation by citrinesea</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
 <a href="https://citrinesea.github.io/translation/ensemble_in_sekai/" target="_blank">Ensemble in SEKAI (AKATSUKI) - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('keito_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1772,13 +1853,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kuro_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kuro_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kuro_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://citrinesea.github.io/translation/shinsei_akatsuki_minitalks/" target="_blank">Rhythm Link Course (AKATSUKI) Talks - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_minitalks/" target="_blank">Mega Stream Course: Follow! AKATSUKI - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_tuesday/" target="_blank">Mega Stream Course: Tuesday Course AKATSUKI - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('kuro_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1794,7 +1876,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="kuro_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('kuro_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('kuro_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1807,6 +1889,7 @@ localStorage.setItem("theme", theme);
 <a href="https://citrinesea.github.io/translation/oshi_room_2024/" target="_blank">Oshi Room Q&A (AKATSUKI) - Translation by citrinesea</a>
 <a href="https://leaderoffestivals.tumblr.com/post/741960668628008960/" target="_blank">ENSTARS BATTLE!! Triangle♡Kyun Scene Showdown - Translation by Leader of Festivals</a>
 <a href="https://citrinesea.github.io/translation/ensemble_in_sekai/" target="_blank">Ensemble in SEKAI (AKATSUKI) - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('kuro_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1827,12 +1910,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="souma_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('souma_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('souma_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://citrinesea.github.io/translation/megastream_minitalks/" target="_blank">Mega Stream Course: Follow! AKATSUKI - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/megastream_tuesday/" target="_blank">Mega Stream Course: Tuesday Course AKATSUKI - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('souma_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1849,7 +1933,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="souma_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('souma_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('souma_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1863,6 +1947,7 @@ localStorage.setItem("theme", theme);
 <a href="https://www.tumblr.com/verdantcrimson/737806005489041408/" target="_blank">Memories of Ensemble - Translation by verdantcrimson</a>
 <a href="https://citrinesea.github.io/translation/oshi_room_2024/" target="_blank">Oshi Room Q&A (AKATSUKI) - Translation by citrinesea</a>
 <a href="https://citrinesea.github.io/translation/ensemble_in_sekai/" target="_blank">Ensemble in SEKAI (AKATSUKI) - Translation by citrinesea</a>
+          <button class="less-btn" onclick="toggleExpand('souma_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1923,13 +2008,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="izumi_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('izumi_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('izumi_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://valentines0eve.wordpress.com/ensemble-stars-road-to-show-cast-commentary/" target="_blank">Ensemble Stars!! -Road to Show- Cast Commentary - Translation by Potay</a>
 <a href="https://polyphonical.tumblr.com/post/728964939861180416/" target="_blank">8th Anniversary Heart to you FES!! 19 - Translation by Sunni</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
+          <button class="less-btn" onclick="toggleExpand('izumi_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1948,7 +2034,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="ritsu_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('ritsu_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('ritsu_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -1956,6 +2042,7 @@ localStorage.setItem("theme", theme);
 <a href="https://nenosuns.wordpress.com/2022/01/24/sakuma-ritsu-management-stories/#mika" target="_blank">Management Story 4 (Mika) - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2022/01/24/sakuma-ritsu-management-stories/#tsukasa" target="_blank">Management Story 5 (Tsukasa) - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2022/01/24/sakuma-ritsu-management-stories/#yuruzu" target="_blank">Management Story 6 (Yuzuru) - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('ritsu_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1968,11 +2055,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="ritsu_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('ritsu_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('ritsu_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://withmyhonesty.tumblr.com/post/749931548044836864/" target="_blank">Evil Telephone: Sleepy Season & A Secret Place - Translation by withmyhonesty</a>
+          <button class="less-btn" onclick="toggleExpand('ritsu_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -1985,12 +2073,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="ritsu_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('ritsu_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('ritsu_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://nenosuns.wordpress.com/2023/09/21/sakuma-ritsu-birthday-course-event-2023/" target="_blank">2023 Birthday Campaign - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2024/09/21/sakuma-ritsu-birthday-course-event-2024/" target="_blank">2024 Birthday Campaign - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('ritsu_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2003,7 +2092,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="ritsu_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('ritsu_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('ritsu_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -2012,6 +2101,7 @@ localStorage.setItem("theme", theme);
 <a href="https://raspberrytls.github.io/story/misc/heart%20to%20you%20fes/34" target="_blank">8th Anniversary Heart to you FES!! 34 - Translation by raspberryjam</a>
 <a href="https://nenosuns.wordpress.com/2024/09/17/enstars-memories-road-class-2-b/" target="_blank">Memories Road: Class 2-B - Translation by Mia</a>
 <a href="https://nenosuns.wordpress.com/2024/07/23/cafe-cinnamon-official-recipe-book-sakuma-ritsu-interview/" target="_blank">Café Cinnamon Official Recipe Book Interview (Ritsu) - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('ritsu_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2030,19 +2120,7 @@ localStorage.setItem("theme", theme);
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence_%EF%BC%8A_End_of_the_Marionette%27s_Strings/Arashi_Narukami_Normal_Event" target="_blank">Marionette: Girls Talk - Translation by Creampuffs</a>
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence_%EF%BC%8A_End_of_the_Marionette%27s_Strings/Arashi_Narukami_Special_Event" target="_blank">Marionette: Being with Naru-chan - Translation by Creampuffs</a>
 <a href="https://withmyhonesty.tumblr.com/post/689147165224943616/" target="_blank">Seven Bridges: Talking on the Way Home & Expectations for Tanabata - Translation by withmyhonesty</a>
-
-<div class="expandable-section" id="arashi_mini">
-
-        <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('arashi_mini')">Expand for more ▼</button>
-        </div>
-
-<div class="expandable-content">
 <a href="https://docs.google.com/document/d/1KFrb__7he5HvNjvAWg1bLysM-t0w7ISC6Pf6FIrY2pA/" target="_blank">Gambit: Plans For a Tea Party & Your Desired Form - Translation by 1nightfever</a>
-</div>
-<div class="fade"></div>
-</div>
-
 <p><h3><span>Birthday</span></h3></p>
 <a href="https://allegiantheart.dreamwidth.org/8475.html" target="_blank">2020 Birthday Campaign - Translation by allegiantheart</a>
 <a href="https://nenosuns.wordpress.com/2022/03/02/narukami-arashi-birthday-course-event-2022/" target="_blank">2021 Birthday Campaign - Translation by Mia</a>
@@ -2055,11 +2133,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="arashi_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('arashi_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('arashi_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://nenosuns.wordpress.com/2024/09/17/enstars-memories-road-class-2-b/" target="_blank">Memories Road: Class 2-B - Translation by Mia</a>
+          <button class="less-btn" onclick="toggleExpand('arashi_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2073,9 +2152,6 @@ localStorage.setItem("theme", theme);
 <p><h3><span>Management</span></h3></p>
 <a href="https://valentines0eve.wordpress.com/2021/07/11/natsume-management-story-2-feat-tsumugi/" target="_blank">Management Story 2 (Tsumugi) - Translation by Potay</a>
 <a href="https://managician-tls.tumblr.com/post/710059201307770880/" target="_blank">Management Story 4 (Sora) - Translation by Sora</a>
-<p><h3><span>Mini Talks</span></h3></p>
-<a href="twilightmalachite.tumblr.com/post/792377482315694080/" target="_blank">Element: The Eccentric of Sorcery - Translation by Mika Enstars</a>
-<a href="twilightmalachite.tumblr.com/post/792377504849625088/" target="_blank">Element: Fortune Telling - Translation by Mika Enstars</a>
 <p><h3><span>Birthday</span></h3></p>
 <a href="https://nenosuns.wordpress.com/2022/02/03/sakasaki-natsume-birthday-course-event-2022/" target="_blank">2021 Birthday Campaign - Translation by Mia</a>
 <a href="https://natsumesakasaki666.tumblr.com/post/746024321996177408/" target="_blank">2023 Birthday Campaign Mini Talks - Translation by Steffy</a>
@@ -2087,12 +2163,13 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="natsume_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('natsume_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('natsume_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://www.tumblr.com/verdantcrimson/731096243172950016/" target="_blank">8th Anniversary Heart to you FES!! 28 - Translation by verdantcrimson</a>
 <a href="https://natsumesakasaki666.tumblr.com/post/748327789177061376/" target="_blank">Switch Album Release Commemoration Solo Live MC Segments - Translation by Steffy</a>
+          <button class="less-btn" onclick="toggleExpand('natsume_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2111,13 +2188,14 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="tsumugi_manage">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('tsumugi_manage')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('tsumugi_manage')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://ibarap.tumblr.com/post/735752253945806848/" target="_blank">Management Story 3 (Mika) - Translation by ibarap</a>
 <a href="https://minugahana07.tumblr.com/post/692836255017402368/" target="_blank">Management Story 4 (Hokuto) - Translation by Minugahana</a>
 <a href="https://minugahana07.tumblr.com/post/693027324257583104/" target="_blank">Management Story 5 (Rei) - Translation by Minugahana</a>
+          <button class="less-btn" onclick="toggleExpand('tsumugi_manage')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2151,11 +2229,12 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="sora_bday">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('sora_bday')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('sora_bday')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://natsumesakasaki666.tumblr.com/post/754767715112304640/" target="_blank">2024 Birthday Campaign - Translation by Steffy</a>
+          <button class="less-btn" onclick="toggleExpand('sora_bday')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2175,19 +2254,20 @@ localStorage.setItem("theme", theme);
 <a href="https://310mc.github.io/management_story/madara/#With-Chiaki" target="_blank">Management Story 5 (Chiaki) - Translation by 310mc</a>
 <a href="https://southerngothics.neocities.org/tl/management/madara/shu" target="_blank">Management Story 6 (Shu) - Translation by ciel</a>
 <p><h3><span>Mini Talks</span></h3></p>
-<a href="https://twilightmalachite.tumblr.com/post/725138716910403584/" target="_blank">Purple Wisterias of May: Slasher Mama & Roaring with Laughter! Wisteria Festival - Translation by kotofucius</a>
+<a href="https://kotofucius.github.io/2017/wisteria-madara-course/" target="_blank">Purple Wisterias of May: Slasher Mama & Roaring with Laughter! Wisteria Festival - Translation by kotofucius</a>
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence%EF%BC%8ARyusei_Bonfire/Madara_Mikejima_Normal_Event" target="_blank">Meteor Impact: Together with "God" - Translation by adriessene</a>
 <a href="https://ensemble-stars.fandom.com/wiki/Reminiscence%EF%BC%8ARyusei_Bonfire/Madara_Mikejima_Special_Event" target="_blank">Meteor Impact: Bathing - Translation by adriessene</a>
 
 <div class="expandable-section" id="madara_mini">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('madara_mini')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('madara_mini')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
 <a href="https://twilightmalachite.tumblr.com/post/725138716910403584/" target="_blank">Last Mission: The Side I Want to Show & Showing One's Hand - Translation by Mika Enstars</a>
 <a href="https://www.tumblr.com/eveningspringbreeze/752039534639857664/" target="_blank">Double Face Album TRIP Mini Talks - Translation by Mango</a>
+          <button class="less-btn" onclick="toggleExpand('madara_mini')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
@@ -2204,7 +2284,7 @@ localStorage.setItem("theme", theme);
 <div class="expandable-section" id="madara_misc">
 
         <div class="expand-btn-wrapper">
-          <button class="expand-btn" onclick="toggleExpand('madara_misc')">Expand for more ▼</button>
+          <button class="expand-btn" onclick="toggleExpand('madara_misc')">Expand for More ▼</button>
         </div>
 
 <div class="expandable-content">
@@ -2216,6 +2296,7 @@ localStorage.setItem("theme", theme);
 <a href="https://leaderoffestivals.tumblr.com/post/749839057474945024/" target="_blank">8th Anniversary Mini Talk: MaM - Translation by Leader of Festivals</a>
 <a href="https://polyphonical.tumblr.com/post/762051721707061248/" target="_blank">Memories Road: Class 3-A - Translation by Sunni</a>
 <a href="https://leaderoffestivals.tumblr.com/post/761603656375222272/" target="_blank">Memories Road: MaM - Translation by Leader of Festivals</a>
+          <button class="less-btn" onclick="toggleExpand('madara_misc')">Show Less ▲</button>
 </div>
 <div class="fade"></div>
 </div>
