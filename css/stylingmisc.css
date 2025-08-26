@@ -27,6 +27,62 @@
     transition: all 0.4s;
     }
     
+    /* DARK MODE STYLING */
+    body.night  div#banner { 
+      background-color: var(--drk-box);
+      color: var(--drk-font)
+    }
+
+    body.night {background: var(--drk-bg); color: var(--drk-font);}
+    body.night a {color: var(--drk-accent);}
+    
+    body.night .links a, body.night .filters {background: var(--drk-header);}
+    body.night .links a, body.night .charafilters {background: var(--drk-header);}
+    body.night .filters a {color:var(--drk-font);}
+    body.night .charafilters a {color:var(--drk-font);}
+    
+    body.night .links a, body.night .filters, body.night .grid .item {
+    border: 1px solid var(--drk-borders);}
+
+    body.night .links a, body.night .charafilters, body.night .grid .item {
+    border: 1px solid var(--drk-borders);}
+    
+    body.night .item {background: var(--drk-box);}
+    body.night .item a {background: var(--drk-accent); color: var(--drk-font);}
+    
+    body.night .item a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
+
+    body.night .item .expandable-section .fade {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--drk-box));
+    }
+    
+    body.night .expand-btn, .less-btn {
+    color: #ccc!important;
+    }
+
+    body.night .links a:hover {
+    color: var(--drk-font);
+    background: var(--drk-accent);
+    }
+
+    body.night .dropdown-content {
+      background-color: var(--drk-bg);
+    }
+
+    body.night .dropdown-content a {
+      color: var(--drk-font); 
+      background: var(--drk-accent);
+    }
+
+   body.night .dropdown-content a:hover {color: var(--drk-font); background: var(--drk-box); border: 1px solid var(--drk-accent);}
+
+   body.night .item span {
+    color: var(--accent);
+    }
+
+    body.night .expand-btn:hover, .less-btn:hover {
+  color: rgb(255, 255, 255);
+    }
 
     a {
     text-decoration: none;
@@ -409,61 +465,4 @@
 .expandable-section.expanded {
   padding-top: 40px; /* This makes it so you can see "Show Less" when it's expanded. If this were 0, it would be buried under the links */
 }
-
-/* DARK MODE STYLING */
-    body.night  div#banner { 
-      background-color: var(--drk-box);
-      color: var(--drk-font)
-    }
-
-    body.night {background: var(--drk-bg); color: var(--drk-font);}
-    body.night a {color: var(--drk-accent);}
-    
-    body.night .links a, body.night .filters {background: var(--drk-header);}
-    body.night .links a, body.night .charafilters {background: var(--drk-header);}
-    body.night .filters a {color:var(--drk-font);}
-    body.night .charafilters a {color:var(--drk-font);}
-    
-    body.night .links a, body.night .filters, body.night .grid .item {
-    border: 1px solid var(--drk-borders);}
-
-    body.night .links a, body.night .charafilters, body.night .grid .item {
-    border: 1px solid var(--drk-borders);}
-    
-    body.night .item {background: var(--drk-box);}
-    body.night .item a {background: var(--drk-accent); color: var(--drk-font);}
-    
-    body.night .item a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
-
-    body.night .item .expandable-section .fade {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--drk-box));
-    }
-    
-    body.night .expand-btn, .less-btn {
-    color: #ccc!important;
-    }
-
-    body.night .links a:hover {
-    color: var(--drk-font);
-    background: var(--drk-accent);
-    }
-
-    body.night .dropdown-content {
-      background-color: var(--drk-bg);
-    }
-
-    body.night .dropdown-content a {
-      color: var(--drk-font); 
-      background: var(--drk-accent);
-    }
-
-   body.night .dropdown-content a:hover {color: var(--drk-font); background: var(--drk-box); border: 1px solid var(--drk-accent);}
-
-   body.night .item span {
-    color: var(--accent);
-    }
-
-    body.night .expand-btn:hover, .less-btn:hover {
-  color: rgb(255, 255, 255);
-    }
     
