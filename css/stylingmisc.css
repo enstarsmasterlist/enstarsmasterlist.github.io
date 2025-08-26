@@ -60,6 +60,11 @@
     color: #ccc;
     }
 
+    body.night .links a:hover {
+    color: var(--drk-font);
+    background: var(--drk-accent);
+    }
+
     body.night .dropdown-content {
       background-color: var(--drk-bg);
     }
@@ -69,7 +74,7 @@
       background: var(--drk-accent);
     }
 
-   body.night .dropdown-content a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
+   body.night .dropdown-content a:hover {color: var(--drk-font); background: var(--drk-box); border: 1px solid var(--drk-accent);}
 
    body.night .item span {
     color: var(--accent);
