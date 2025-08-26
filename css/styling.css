@@ -32,7 +32,7 @@
       background-color: var(--drk-box);
       color: var(--drk-font)
     }
-    
+
     body.night {background: var(--drk-bg); color: var(--drk-font);}
     body.night a {color: var(--drk-accent);}
     
@@ -41,16 +41,36 @@
     body.night .filters a {color:var(--drk-font);}
     body.night .charafilters a {color:var(--drk-font);}
     
-    body.night .links a, body.night .filters, body.night .item {
+    body.night .links a, body.night .filters, body.night .grid .item {
     border: 1px solid var(--drk-borders);}
 
-    body.night .links a, body.night .charafilters, body.night .item {
+    body.night .links a, body.night .charafilters, body.night .grid .item {
     border: 1px solid var(--drk-borders);}
     
     body.night .item {background: var(--drk-box);}
     body.night .item a {background: var(--drk-accent); color: var(--drk-font);}
     
     body.night .item a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
+
+    body.night .links a:hover {
+    color: var(--drk-font);
+    background: var(--drk-accent);
+    }
+
+    body.night .dropdown-content {
+      background-color: var(--drk-bg);
+    }
+
+    body.night .dropdown-content a {
+      color: var(--drk-font); 
+      background: var(--drk-accent);
+    }
+
+   body.night .dropdown-content a:hover {color: var(--drk-font); background: var(--drk-box); border: 1px solid var(--drk-accent);}
+
+   body.night .item span {
+    color: var(--accent);
+    }
     
     a {
     text-decoration: none;
