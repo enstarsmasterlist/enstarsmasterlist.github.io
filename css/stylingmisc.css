@@ -69,6 +69,8 @@
       background: var(--drk-accent);
     }
 
+   body.night .dropdown-content a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
+
    body.night .item span {
     color: var(--accent);
     }
@@ -98,6 +100,10 @@
     width: 125px;
     height: 125px;
     border-radius: 8px;
+    }
+
+    .lightswitch:hover {
+    cursor: pointer;
     }
     
     .links a, .filters {
