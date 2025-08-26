@@ -57,7 +57,7 @@
     }
     
     body.night .expand-btn, .less-btn {
-    color: #ccc;
+    color: #ccc!important;
     }
 
     body.night .links a:hover {
@@ -80,7 +80,7 @@
     color: var(--accent);
     }
 
-    body.night .item .expand-btn:hover, .less-btn:hover {
+    body.night .expand-btn:hover, .less-btn:hover {
   color: rgb(255, 255, 255);
     }
 
