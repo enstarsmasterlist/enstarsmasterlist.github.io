@@ -283,13 +283,14 @@
     position: relative;
     display: inline-block;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 /* Dropdown Button */
 .dropbtn {
   background-color: var(--box);
   color: var(--accent);
-  padding: 16px;
+  padding: 10px;
   font-size: 16px;
   border: none;
 }
