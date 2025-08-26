@@ -2400,9 +2400,12 @@ function toggleExpand(sectionId) {
   container.classList.toggle('expanded');
   
   if (container.classList.contains('expanded')) {
-    btn.textContent = 'Show Less ▲';
+    /*btn.textContent = 'Show Less ▲';*/
+    btn.style.display = 'none';
+    container.style.paddingTop = '0';
   } else {
-    btn.textContent = 'Expand for More ▼';
+    btn.style.display = 'block';
+    /*btn.textContent = 'Expand for More ▼';*/
   }
 }
 </script>
