@@ -343,6 +343,7 @@
         width: flex;
         /* margin-right: 20px; */
     }
+}
 
       @media only screen and (max-width: 1023px) {
         .mobile-controls {display: block;}
@@ -541,3 +542,4 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: var(--accent); color: var(--header);}
+    
