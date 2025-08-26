@@ -300,8 +300,6 @@
   box-sizing: content-box;
 }
 
-.dropdown:active .dropdown-content {display: block;}
-
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
