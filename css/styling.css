@@ -115,7 +115,6 @@
     .links {margin: 0 15px;}
     
     .links a {
-    justify-content: center;
     background: var(--header);
     border: 1px solid var(--borders);
     border-radius: 5px;
