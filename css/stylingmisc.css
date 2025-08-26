@@ -56,8 +56,12 @@
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--drk-box));
     }
     
-    body.night .expand-btn, .less-btn {
-    color: #ccc!important;
+    body.night .less-btn {
+    color: #ccc;
+    }
+
+    body.night .expand-btn {
+    color: #ccc;
     }
 
     body.night .links a:hover {
@@ -80,7 +84,11 @@
     color: var(--accent);
     }
 
-    body.night .expand-btn:hover, .less-btn:hover {
+    body.night .less-btn:hover {
+  color: rgb(255, 255, 255);
+    }
+
+    body.night .expand-btn:hover {
   color: rgb(255, 255, 255);
     }
 
@@ -405,7 +413,11 @@
   z-index: 3;
 }
 
-.expand-btn:hover, .less-btn:hover{
+.expand-btn:hover {
+  color: rgb(12, 127, 159);
+}
+
+.less-btn:hover {
   color: rgb(12, 127, 159);
 }
 
