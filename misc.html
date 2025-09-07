@@ -389,6 +389,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const log = console.log,
+    array = ["https://enstarsmasterlist.github.io/docs/assets/images/misc/rei render.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/rei render 2.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/rei render 3.png"],
+    random = Math.floor(Math.random() * array.length),
+    target = document.getElementById("rei-images");
+  target.src = `${array[random]}`;
+  log(target);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const log = console.log,
+    array = ["https://enstarsmasterlist.github.io/docs/assets/images/misc/kaoru render.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/kaoru render 2.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/kaoru render 3.png"],
+    random = Math.floor(Math.random() * array.length),
+    target = document.getElementById("kaoru-images");
+  target.src = `${array[random]}`;
+  log(target);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const log = console.log,
+    array = ["https://enstarsmasterlist.github.io/docs/assets/images/misc/koga render.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/koga render 2.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/koga render 3.png"],
+    random = Math.floor(Math.random() * array.length),
+    target = document.getElementById("koga-images");
+  target.src = `${array[random]}`;
+  log(target);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const log = console.log,
+    array = ["https://enstarsmasterlist.github.io/docs/assets/images/misc/adonis render.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/adonis render 2.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/adonis render 3.png"],
+    random = Math.floor(Math.random() * array.length),
+    target = document.getElementById("adonis-images");
+  target.src = `${array[random]}`;
+  log(target);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const log = console.log,
     array = ["https://enstarsmasterlist.github.io/docs/assets/images/misc/keito render.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/keito render 2.png", "https://enstarsmasterlist.github.io/docs/assets/images/misc/keito render 3.png"],
     random = Math.floor(Math.random() * array.length),
     target = document.getElementById("keito-images");
