@@ -11,8 +11,8 @@ $(document).ready(function () {
       .substring(1)
       .replace(/_/g, "-")
       .replace(/%20/g, "-")
-      .replace(/&midast;/g, "-")
-      .replace(/&bdquo;/g, "-")
+      .replace(/&midast;/g, "")
+      .replace(/&bdquo;/g, "")
       .toLowerCase();
     // separate hash by ;
     hash = hash.split(";");
