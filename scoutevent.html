@@ -309,6 +309,22 @@ const characterToId = [
         chara: "nice",
         id: 86
     },
+    {
+        chara: "juis",
+        id: 88
+    },
+    {
+        chara: "nozomi",
+        id: 90
+    },
+    {
+        chara: "mashu",
+        id: 89
+    },
+    {
+        chara: "chitose",
+        id: 87
+    },
     
 ];
 
@@ -327,7 +343,7 @@ $container.children().each(function() {
 });
 
 characterToId.forEach(character => {
-    $("#character-filter").append(`<li><a href="#" class="filter-icon" data-filter-value="${Array.isArray(character.chara) ? character.chara.map(name => `.${name}`).join().replaceAll(",", "") : `.${character.chara}`}"><img src="https://assets.enstars.link/assets/character_sd_square1_${character.id}.png" alt=${Array.isArray(character.chara) ? character.chara.join("/") : character.chara} width="40" height="40" /></a></li>`)
+    $("#character-filter").append(`<li><a href="#" class="filter-icon" data-filter-value="${Array.isArray(character.chara) ? character.chara.map(name => `.${name}`).join().replaceAll(",", "") : `.${character.chara}`}"><img src="https://enstarsmasterlist.github.io/docs/assets/images/chibihead/character_sd_square1_${character.id}.png" alt=${Array.isArray(character.chara) ? character.chara.join("/") : character.chara} width="40" height="40" /></a></li>`)
 })
 
  var filters = {};
@@ -455,6 +471,7 @@ localStorage.setItem("theme", theme);
         <li><a href="#" data-filter-value=".df">Double Face</a></li>
         <li><a href="#" data-filter-value=".4piece">4piece</a></li>
         <li><a href="#" data-filter-value=".esupuri">Special for Princess!</a></li>
+        <li><a href="#" data-filter-value=".esupuri">MELLOW DEAR US</a></li>
         </ul>
 
         <ul class="filter option-set exclusive" data-filter-group="season">
