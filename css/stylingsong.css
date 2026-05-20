@@ -6,6 +6,7 @@
     --box: #ffffff;
     --borders: #f0f0f0;
     --accent: #87a3b5;
+    --neu: #d0d0d0;
     
     /* dark mode colors */
     --drk-bg: #181825;
@@ -14,6 +15,7 @@
     --drk-header: #2C3349;
     --drk-box: #2C3349;
     --drk-borders: #181825;
+    --drk-neu: #434343;
     }
     
     body {
@@ -52,6 +54,23 @@
     
     body.night .item a:hover {color: var(--drk-font); background: transparent; border: 1px solid var(--drk-accent);}
 
+    body.night .item .expandable-section .fade {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--drk-box));
+    }
+
+    body.night .dropbtn {
+    background: var(--drk-header);
+    color: var(--drk-accent);
+}
+    
+    body.night .less-btn {
+    color: #ccc;
+    }
+
+    body.night .expand-btn {
+    color: #ccc;
+    }
+
     body.night .links a:hover {
     color: var(--drk-font);
     background: var(--drk-accent);
@@ -65,18 +84,21 @@
       color: var(--drk-font); 
       background: var(--drk-accent);
     }
-    
-  body.night .dropbtn {
-    background: var(--drk-header);
-    color: var(--drk-accent);
-  }
 
    body.night .dropdown-content a:hover {color: var(--drk-font); background: var(--drk-box); border: 1px solid var(--drk-accent);}
 
    body.night .item span {
     color: var(--accent);
     }
-    
+
+    body.night .less-btn:hover {
+  color: rgb(255, 255, 255);
+    }
+
+    body.night .expand-btn:hover {
+  color: rgb(255, 255, 255);
+    }
+
     a {
     text-decoration: none;
     color: var(--accent);
@@ -99,6 +121,10 @@
     height: 125px;
     border-radius: 8px;
     }
+
+    .lightswitch:hover {
+    cursor: pointer;
+    }
     
     .links a, .filters {
     background: var(--header);
@@ -112,7 +138,7 @@
     border-radius: 8px;
     }
     
-    .links {margin: 0 15px;}
+    .links {margin: 0 15px; text-align: center;}
     
     .links a {
     background: var(--header);
@@ -120,8 +146,8 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 18px;
-    display: flex;
-    margin-bottom: 10px;
+    display: inline-block;
+    margin: 10px 10px auto;
     }
     
     .links a:hover {
@@ -168,26 +194,28 @@
     margin: 0 auto 25px;
     }
     
-    .item {
+    .grid .item {
     display: block;
     background: var(--box);
     margin: .5%;
-    width: 25%;
+  
     box-sizing: border-box;
     border: 1px solid var(--borders);
     border-radius: 5px;
-    min-width: 32%;
-    max-width: 430px;
-    overflow: hidden
+    min-width: 49%;
+    width: 25%;
+    overflow: hidden;
+    height: 310px;
+    overflow: hidden;
     }
     
-    .item h2 {margin: 0 0 5px;}
+    .item h2 {margin: 0 0 3px;}
     
     .item a {
     display: block;
     text-align: center;
     background: var(--accent);
-    padding: 6px 8px;
+    padding: 2px 2px;
     margin: 1px auto;
     border-radius: 3px;
     border: 1px solid var(--accent);
@@ -218,22 +246,26 @@
     .right {
     height: 101%;
     width: 100%;
-    padding: 15px;
-    margin: 1;
+    padding: 10px;
+    margin: 1px;
     flex: 3 3 250px;
+    overflow-y: scroll;
+    height: 300px;
     }
     
     .left {
-    height: 101%;
-    width: 70%;
-    flex: 1 0 100px;
+    margin: 5px 5px 5px;
+    position: relative;
+    height: 50%;
+    width: 50%;
+    padding: 7px;
+    flex: 1 0 250px;
     }
-    
+
     .item h2 {margin: 5px 0 5px; color: var(--accent);}
-    .item b {color: var(--accent);}
+    .item b {color: var(--neu);}
     .item i {font-size: 0.9em;}
-    .item p {line-height: 1em;}
-    
+
     .item a:hover {
     background: transparent;
     color: var(--font);
@@ -246,28 +278,24 @@
     }
     
     .item img {
-        display: block;
-        max-width: 101%;
-        object-fit: cover;
-        height: 250px
-    }
+      display: block;
+      max-width: 101%;
+      }
     
     
     h3 {
        width: 90%;
-       text-align: center;
-       border-bottom: 2px solid var(--borders);
-       line-height: 0.1em;
-       margin: 0 auto;
-       margin-top: 1em;
-       padding:0 15px;
+       text-align: left;
+       line-height: 15px;
+       margin-top: 0px;
+       margin-bottom: 0px
     }
-    
+  
+
     h3 span {
         background:#fff;
         padding:0 15px;
-        color: var(--accent);
-        font-size: 0.85em;
+        color: var(--font);
     }
     
     table#info {
@@ -279,10 +307,6 @@
       color: var(--accent);
       width: 100%;
       font-size: 0.9em;
-    }
-    
-    .lightswitch:hover {
-      cursor: pointer;
     }
     
     body.night table#info {
@@ -304,13 +328,19 @@
         background-color: var(--accent); 
         width: 100%; 
         font-size: 12px;
-        z-index: 100;
       }
       div#banner-content { 
         width: 780px; 
         padding: 3px; 
         text-align: center;
       }
+
+    @media only screen and (max-width: 720px) {
+    .filters {
+        width: flex;
+        /* margin-right: 20px; */
+    }
+}
 
       @media only screen and (max-width: 1023px) {
         .mobile-controls {display: block;}
@@ -347,35 +377,25 @@
     .tmblr-iframe--app-cta-button {display:none!important;}
     
     /* MEDIA QUERIES FOR RESPONSIVENESS */
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 720px) {
     header {width: 100%;}
     .filters {width: flex; margin-right: 20px;}
     .charafilters {width: flex; margin-right: 20px;}
-    .item {width: 48%; display: inline-block;}
+    .grid .item {width: 48%; display: inline-block;}
     }
     
-    @media only screen and (max-width: 700px) {
-    .left {
-    height: 101%;
-    width: 70%;
-    flex: 1 1 100px;
-    }
-    }
-
-
     @media only screen and (max-width: 600px) {
     header {width: 100%; }
-    .item {width: 100%; display: inline-block; margin: 1% 0;}
-    .item img {height: 380px}
+    .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+    .left {flex: 1 1 100px;}
     }
     
-    /* The container <div> - needed to position the dropdown content */
 
+/* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  margin: 10px 12px auto;
 }
 
 /* Dropdown Button */
@@ -391,13 +411,6 @@
   word-wrap: break-word;
   cursor: pointer;
   box-sizing: content-box;
-  border-radius: 5px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -430,5 +443,4 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: var(--accent); color: var(--header);}
-       
     
