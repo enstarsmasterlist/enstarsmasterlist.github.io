@@ -198,15 +198,13 @@
     display: block;
     background: var(--box);
     margin: .5%;
-  
+    width: 25%;
     box-sizing: border-box;
     border: 1px solid var(--borders);
     border-radius: 5px;
-    min-width: 49%;
-    width: 25%;
-    overflow: hidden;
-    height: 310px;
-    overflow: hidden;
+    min-width: 32%;
+    max-width: 430px;
+    overflow: hidden
     }
     
     .item h2 {margin: 0 0 3px;}
@@ -215,8 +213,8 @@
     display: block;
     text-align: center;
     background: var(--accent);
-    padding: 2px 2px;
-    margin: 1px auto;
+    padding: 3px 8px;
+    margin: 10px 1px auto;
     border-radius: 3px;
     border: 1px solid var(--accent);
     color: var(--bg);
@@ -231,7 +229,7 @@
     border-radius: 3px;
     border: 1px solid var(--accent);
     color: var(--accent);
-    flex-basis: 50%
+    flex-basis: 90%;
     }
     
     .box {
@@ -241,6 +239,11 @@
     
     .box2 {
     display: flex;
+    margin: 0px 5px 0px;
+    position: relative;
+    flex: auto;
+    width: 100%;
+    padding: 5px;
     }
     
     .right {
@@ -250,7 +253,6 @@
     margin: 1px;
     flex: 3 3 250px;
     overflow-y: scroll;
-    height: 300px;
     }
     
     .left {
@@ -259,11 +261,11 @@
     height: 50%;
     width: 50%;
     padding: 7px;
-    flex: 1 0 250px;
+    flex: 1 0 150px;
     }
 
     .item h2 {margin: 5px 0 5px; color: var(--accent);}
-    .item b {color: var(--neu);}
+    .item b {color: var(--accent);}
     .item i {font-size: 0.9em;}
 
     .item a:hover {
