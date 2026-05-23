@@ -110,6 +110,359 @@ localStorage.setItem("theme", theme);
 });
 </script>
 
+<script>
+function getComboFilterCustom(filters) {
+    var i = 0;
+    var comboFilters = [];
+    for (var prop in filters) {
+        var filterGroup = filters[prop];
+        if (!filterGroup.length) {
+            continue;
+        }
+        if (i === 0) {
+            comboFilters = filterGroup.slice(0).join().replaceAll(",","");
+        } else {
+            var filterSelectors = [];
+            var groupCombo = Array.isArray(comboFilters) ? comboFilters.slice(0).join().replaceAll(",", "") : comboFilters;
+            for (var k = 0, len3 = filterGroup.length; k < len3; k++) {
+                    filterSelectors.push(groupCombo + filterGroup[k]);
+            }
+            comboFilters = filterSelectors;
+        }
+        i++;
+    }
+    var comboFilter = Array.isArray(comboFilters) ? comboFilters.join(", ") : comboFilters;
+    return comboFilter;
+}
+
+// getting character ids to use chibi heads
+const characterToId = [
+    {
+        chara: "eichi",
+        id: 22,
+    },
+    {
+        chara: "wataru",
+        id: 27,
+    },
+    {
+        chara: "tori",
+        id: 6,
+    },
+    {
+        chara: "yuzuru",
+        id: 19,
+    },
+    {
+        chara: "hokuto",
+        id: 12,
+    },
+    {
+        chara: "subaru",
+        id: 11,
+    },
+    {
+        chara: "makoto",
+        id: 13,
+    },
+    {
+        chara: "mao",
+        id: 18,
+    },
+    {
+        chara: "tetora",
+        id: 1
+    },
+    {
+        chara: "midori",
+        id: 5,
+    },
+    {
+        chara: "shinobu",
+        id: 7
+    },
+    {
+        chara: "chiaki",
+        id: 25,
+    },
+    {
+        chara: "kanata",
+        id: 28,
+    },
+    {
+        chara: "hiiro",
+        id: 67
+    },
+    {
+        chara: "aira",
+        id: 68
+    },
+    {
+        chara: "mayoi",
+        id: 69
+    },
+    {
+        chara: "tatsumi",
+        id: 70
+    },
+    {
+        chara: "nagisa",
+        id: 50,
+    },
+    {
+        chara: "hiyori",
+        id: 41
+    },
+    {
+        chara: "ibara",
+        id: 51
+    },
+    {
+        chara: "jun",
+        id: 42
+    },
+    {
+        chara: "shu",
+        id: 35
+    },
+    {
+        chara: "mika",
+        id: 34
+    },
+    {
+        chara: "hinata",
+        id: 4
+    },
+    {
+        chara: "yuta",
+        id: "8_new"
+    },
+    {
+        chara: "rinne",
+        id: 71
+    },
+    {
+        chara: "himeru",
+        id: 72
+    },
+    {
+        chara: "kohaku",
+        id: 73
+    },
+    {
+        chara: "niki",
+        id: 74
+    },
+    {
+        chara: "rei",
+        id: 29
+    },
+    {
+        chara: "kaoru",
+        id: 23
+    },
+    {
+        chara: "koga",
+        id: 16
+    },
+    {
+        chara: "adonis",
+        id: 15
+    },
+    {
+        chara: "tomoya",
+        id: 3
+    },
+    {
+        chara: "nazuna",
+        id: 30
+    },
+    {
+        chara: "mitsuru",
+        id: 9
+    },
+    {
+        chara: "hajime",
+        id: 2
+    },
+    {
+        chara: "keito",
+        id: 21
+    },
+    {
+        chara: "kuro",
+        id: 26
+    },
+    {
+        chara: "souma",
+        id: 14
+    },
+    {
+        chara: "tsukasa",
+        id: 10
+    },
+    {
+        chara: "leo",
+        id: 33
+    },
+    {
+        chara: "izumi",
+        id: 24
+    },
+    {
+        chara: "ritsu",
+        id: 17
+    },
+    {
+        chara: "arashi",
+        id: 20
+    },
+    {
+        chara: "natsume",
+        id: 38
+    },
+    {
+        chara: "tsumugi",
+        id: 39
+    },
+    {
+        chara: "sora",
+        id: 37
+    },
+    {
+        chara: "madara",
+        id: 40,
+    },
+    {
+        chara: "jin",
+        id: 31,
+    },
+    {
+        chara: "akiomi",
+        id: 32,
+    },
+    {
+        chara: "seiya",
+        id: 61,
+    },
+    {
+        chara: "gatekeeper",
+        id: 75,
+    },
+    {
+        chara: "negi",
+        id: 76,
+    },
+    {
+        chara: "esu",
+        id: 81
+    },
+    {
+        chara: "ibuki",
+        id: 82,
+    },
+    {
+        chara: "kanna",
+        id: 83,
+    },
+    {
+        chara: "yume",
+        id: 84,
+    },
+    {
+        chara: "raika",
+        id: 85
+    },
+    {
+        chara: "nice",
+        id: 86
+    },
+    {
+        chara: "juis",
+        id: 88
+    },
+    {
+        chara: "nozomi",
+        id: 90
+    },
+    {
+        chara: "mashu",
+        id: 89
+    },
+    {
+        chara: "chitose",
+        id: 87
+    },
+    
+];
+
+// isotope-combination-filtering
+$(document).ready(function() {
+    
+// using javascript to remedy the situation
+
+// add character names to the div class list
+ var $container = $(".grid");
+$container.children().each(function() {
+    const characters = $(this).children().find("p").text().split(':')[1].replaceAll(" ", "").split(',');
+    characters.forEach(character => {
+        $(this).addClass(character.toLowerCase());
+    });
+});
+
+characterToId.forEach(character => {
+    $("#character-filter").append(`<li><a href="#" class="filter-icon" data-filter-value="${Array.isArray(character.chara) ? character.chara.map(name => `.${name}`).join().replaceAll(",", "") : `.${character.chara}`}"><img src="https://enstarsmasterlist.github.io/docs/assets/images/chibihead/character_sd_square1_${character.id}.png" alt=${Array.isArray(character.chara) ? character.chara.join("/") : character.chara} width="40" height="40" /></a></li>`)
+})
+
+ var filters = {};
+ var $grid = $container.isotope({
+   itemSelector: ".item", 
+   percentPosition: true 
+ });
+
+
+$(".option-set a").click(function(e) {
+   var $this = $(this); 
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr);
+   var $optionSet = $this.parents(".option-set");
+   var group = $optionSet.attr("data-filter-group");
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]');
+   var activeClass = "selected",
+     exclClass = "exclusive";
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilterCustom(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});// DARK MODE
+window.addEventListener("DOMContentLoaded", function() {
+const btn = document.querySelector(".lightswitch");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+document.body.classList.add("night");
+}
+
+btn.addEventListener("click", function () {
+document.body.classList.toggle("night");
+
+let theme = "light";
+if (document.body.classList.contains("night")) {
+theme = "dark";
+}
+localStorage.setItem("theme", theme);
+});
+});
+</script>
+
 <link rel="stylesheet" href="css/stylingsong.css">
 
 </head>
@@ -124,55 +477,81 @@ localStorage.setItem("theme", theme);
 <header>
 <img src="{PortraitURL-128}" class="avtr">
 
-<div id="filters-container">
-
-    <div class="filters">
-        <ul class="filter option-set" data-filter-group="unit">
-        <li><b>UNIT</b></li>
-        <li><a href="#" data-filter-value="" class="selected">All</a></li>
-        <br>
-        <li><a href="#" data-filter-value=".fine">fine</a></li>
-        <li><a href="#" data-filter-value=".trickstar">Trickstar</a></li>
-        <li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
-        <li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
-        <br>
-        <li><a href="#" data-filter-value=".eden">Eden</a></li>
-        <li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
-        <li><a href="#" data-filter-value=".2wink">2wink</a></li>
-        <li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
-        <br>
-        <li><a href="#" data-filter-value=".undead">UNDEAD</a></li>
-        <li><a href="#" data-filter-value=".rabits">Ra*bits</a></li>
-        <li><a href="#" data-filter-value=".aktk">AKATSUKI</a></li>
-        <li><a href="#" data-filter-value=".mdu">MELLOW DEAR US</a></li>
-        <br>
-        <li><a href="#" data-filter-value=".knights">Knights</a></li>
-        <li><a href="#" data-filter-value=".switch">Switch</a></li>
-        <li><a href="#" data-filter-value=".mam">MaM</a></li>
-        <li><a href="#" data-filter-value=".esupuri">Special for Princess!</a></li>
-        <li><a href="#" data-filter-value=".df">Double Face</a></li>
-        <br>
-        <li><a href="#" data-filter-value=".jna">Jin & Akiomi</a></li>
-        <li><a href="#" data-filter-value=".shuffle">Shuffle</a></li>
-        <li><a href="#" data-filter-value=".solo">Solos</a></li>
-        <li><a href="#" data-filter-value=".other">Other</a></li>
-        </ul>
-
-    </div>
-
 <div class="links">
 <div class="dropdown">
-  <button class="dropbtn" title="Navigation"><i class="ph ph-list-dashes"></i></button>
-  <div class="dropdown-content">
-    <a href="https://enstarsmasterlist.github.io/scoutevent">Event & Scout</a>
-    <a href="https://enstarsmasterlist.github.io/featureidol">Feature & Idol</a>
-    <a href="https://enstarsmasterlist.github.io/misc">Miscellaneous</a>
-  </div>
+<button class="dropbtn" title="Navigation"><i class="ph ph-list-dashes"></i></button>
+<div class="dropdown-content">
+  <a href="https://enstarsmasterlist.github.io/scoutevent">Event & Scout</a>
+  <a href="https://enstarsmasterlist.github.io/featureidol">Feature & Idol</a>
+  <a href="https://enstarsmasterlist.github.io/misc">Miscellaneous</a>
 </div>
+</div>
+
 <a href="https://tetratto.com/@enstarsmasterlist" target="_blank" title="Mailbox"><i class="ph-envelope-fill"></i></a>
 <a href="https://docs.google.com/spreadsheets/d/1fPYc2w8F8_z_Fys5tI1bn--NGJ3oAso-LK41BPzM__M/" target="_blank" title="Changelog"><i class="ph-sparkle-fill"></i></a>
 <a class="lightswitch" title="Light/Dark Mode"><i class="ph-moon-fill"></i></a>
 </div>
+
+<div id="filters-container">
+
+    <div class="filters">
+        <ul class="filter option-set exclusive" data-filter-group="gen">
+        <li class="filter option-set exclusive"><a href="#" data-filter-value="" class="reset selected">All</a></li> <!-- IMPROTANT! make sure not to delete! -->
+        <li class="filter option-set exclusive"><a href="#" data-filter-value=".tl">TL Available</a></li>
+        </ul>
+
+        <ul class="filter option-set exclusive" data-filter-group="type">
+        <li><b>STORY TYPE</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".sub">Sub Story (!)</a></li>
+        <li><a href="#" data-filter-value=".idol">Idol Story (!!)</a></li>
+        <li><a href="#" data-filter-value=".intro">Introduction Scouts</a></li>
+        <li><a href="#" data-filter-value=".feature">Feature Scouts</a></li>
+        <li><a href="#" data-filter-value=".global">Global-exclusive</a></li>
+        <li><a href="#" data-filter-value=".collab">Collaboration</a></li>
+        </ul>
+
+        <ul class="filter option-set" data-filter-group="unit">
+        <li><b>UNIT</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".fine">fine</a></li>
+        <li><a href="#" data-filter-value=".trickstar">Trickstar</a></li>
+        <li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
+        <li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
+        <li><a href="#" data-filter-value=".eden">Eden</a></li>
+        <li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
+        <li><a href="#" data-filter-value=".2wink">2wink</a></li>
+        <li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
+        <li><a href="#" data-filter-value=".undead">UNDEAD</a></li>
+        <li><a href="#" data-filter-value=".rabits">Ra*bits</a></li>
+        <li><a href="#" data-filter-value=".aktk">AKATSUKI</a></li>
+        <li><a href="#" data-filter-value=".knights">Knights</a></li>
+        <li><a href="#" data-filter-value=".switch">Switch</a></li>
+        <li><a href="#" data-filter-value=".mam">MaM</a></li>
+        <li><a href="#" data-filter-value=".df">Double Face</a></li>
+        <li><a href="#" data-filter-value=".4piece">4piece</a></li>
+        <li><a href="#" data-filter-value=".esupuri">Special for Princess!</a></li>
+        <li><a href="#" data-filter-value=".mdu">MELLOW DEAR US</a></li>
+        </ul>
+
+        <ul class="filter option-set exclusive" data-filter-group="season">
+        <li><b>SEASON</b></li>
+        <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        <li><a href="#" data-filter-value=".spring">Spring</a></li>
+        <li><a href="#" data-filter-value=".summer">Summer</a></li>
+        <li><a href="#" data-filter-value=".autumn">Autumn</a></li>
+        <li><a href="#" data-filter-value=".winter">Winter</a></li>
+        </ul>
+
+    </div>
+
+    <div class="charafilters">
+        <ul class="filter option-set" id="character-filter" data-filter-group="character">
+            <li><b>CHARACTER</b></li>
+            <li><a href="#" data-filter-value="" class="selected">All</a></li>
+        </ul>
+    </div>
+</div></header>
 
 </header>
 <!-- HEADER ENDS -->

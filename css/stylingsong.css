@@ -138,7 +138,7 @@
     border-radius: 8px;
     }
     
-    .links {margin: 0 15px; text-align: center;}
+    .links {margin: 0 15px;}
     
     .links a {
     background: var(--header);
@@ -146,8 +146,8 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 18px;
-    display: inline-block;
-    margin: 10px 10px auto;
+    display: flex;
+    margin-bottom: 10px;
     }
     
     .links a:hover {
@@ -176,8 +176,7 @@
     max-height: 100px;
     padding: 4px 10px;
     overflow: scroll;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px
     
     }
     
