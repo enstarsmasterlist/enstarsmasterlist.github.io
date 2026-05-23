@@ -40,6 +40,8 @@ https://phosphoricons.com/
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
 
+<script src="/js/hash-lightbox.js"></script>
+
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -342,18 +344,6 @@ const characterToId = [
         id: 32,
     },
     {
-        chara: "seiya",
-        id: 61,
-    },
-    {
-        chara: "gatekeeper",
-        id: 75,
-    },
-    {
-        chara: "negi",
-        id: 76,
-    },
-    {
         chara: "esu",
         id: 81
     },
@@ -372,10 +362,6 @@ const characterToId = [
     {
         chara: "raika",
         id: 85
-    },
-    {
-        chara: "nice",
-        id: 86
     },
     {
         chara: "juis",
@@ -501,14 +487,20 @@ localStorage.setItem("theme", theme);
         </ul>
 
         <ul class="filter option-set exclusive" data-filter-group="type">
-        <li><b>STORY TYPE</b></li>
+        <li><b>YEAR</b></li>
         <li><a href="#" data-filter-value="" class="selected">All</a></li>
-        <li><a href="#" data-filter-value=".sub">Sub Story (!)</a></li>
-        <li><a href="#" data-filter-value=".idol">Idol Story (!!)</a></li>
-        <li><a href="#" data-filter-value=".intro">Introduction Scouts</a></li>
-        <li><a href="#" data-filter-value=".feature">Feature Scouts</a></li>
-        <li><a href="#" data-filter-value=".global">Global-exclusive</a></li>
-        <li><a href="#" data-filter-value=".collab">Collaboration</a></li>
+        <li><a href="#" data-filter-value=".2015">2015</a></li>
+        <li><a href="#" data-filter-value=".2016">2016</a></li>
+        <li><a href="#" data-filter-value=".2017">2017</a></li>
+        <li><a href="#" data-filter-value=".2018">2018</a></li>
+        <li><a href="#" data-filter-value=".2019">2019</a></li>
+        <li><a href="#" data-filter-value=".2020">2020</a></li>
+        <li><a href="#" data-filter-value=".2021">2021</a></li>
+        <li><a href="#" data-filter-value=".2022">2022</a></li>
+        <li><a href="#" data-filter-value=".2023">2023</a></li>
+        <li><a href="#" data-filter-value=".2024">2024</a></li>
+        <li><a href="#" data-filter-value=".2025">2025</a></li>
+        <li><a href="#" data-filter-value=".2026">2026</a></li>
         </ul>
 
         <ul class="filter option-set" data-filter-group="unit">
@@ -519,6 +511,8 @@ localStorage.setItem("theme", theme);
         <li><a href="#" data-filter-value=".rst">RYUSEITAI</a></li>
         <li><a href="#" data-filter-value=".alk">ALKALOID</a></li>
         <li><a href="#" data-filter-value=".eden">Eden</a></li>
+        <li><a href="#" data-filter-value=".eden">Adam</a></li>
+        <li><a href="#" data-filter-value=".eden">Eve</a></li>
         <li><a href="#" data-filter-value=".valkyrie">Valkyrie</a></li>
         <li><a href="#" data-filter-value=".2wink">2wink</a></li>
         <li><a href="#" data-filter-value=".crazyb">Crazy:B</a></li>
@@ -535,12 +529,11 @@ localStorage.setItem("theme", theme);
         </ul>
 
         <ul class="filter option-set exclusive" data-filter-group="season">
-        <li><b>SEASON</b></li>
+        <li><b>TYPES</b></li>
         <li><a href="#" data-filter-value="" class="selected">All</a></li>
-        <li><a href="#" data-filter-value=".spring">Spring</a></li>
-        <li><a href="#" data-filter-value=".summer">Summer</a></li>
-        <li><a href="#" data-filter-value=".autumn">Autumn</a></li>
-        <li><a href="#" data-filter-value=".winter">Winter</a></li>
+        <li><a href="#" data-filter-value=".solo">Solos</a></li>
+        <li><a href="#" data-filter-value=".shuffle">Shuffle</a></li>
+        <li><a href="#" data-filter-value=".misc">Miscellaneous</a></li>
         </ul>
 
     </div>
@@ -559,7 +552,7 @@ localStorage.setItem("theme", theme);
 <!-- GRID STARTS -->
 <section class="grid">
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2015 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 1.webp"></div>
 <div class="right"><h2>Melody in the Dark</h2>
 <div class="info-grid">
@@ -581,7 +574,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2015 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 1.webp"></div>
 <div class="right"><h2>Honey Milk wa Okonomi de</h2>
   <i>With Honey Milk to Taste</i>
@@ -604,7 +597,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi">
+<div class="item 2015 knights tsukasa leo arashi ritsu izumi">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 1.webp"></div>
 <div class="right"><h2>Voice of Sword</h2>
 <div class="info-grid">
@@ -626,7 +619,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi">
+<div class="item 2015 knights tsukasa leo arashi ritsu izumi">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 1.webp"></div>
 <div class="right"><h2>Checkmate Knights</h2>
 <div class="info-grid">
@@ -648,7 +641,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru">
+<div class="item 2015 fine eichi wataru tori yuzuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 1.webp"></div>
 <div class="right"><h2>Owaranai Symphonia</h2>
   <i>Never-ending Symphonia</i>
@@ -671,7 +664,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru">
+<div class="item 2015 fine eichi wataru tori yuzuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 1.webp"></div>
 <div class="right"><h2>RAINBOW CIRCUS</h2>
 <div class="info-grid">
@@ -693,7 +686,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2015 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 1.webp"></div>
 <div class="right"><h2>Hyakka Ryouran, Akatsukiyo</h2>
   <i>A Thousand Blossoms, the Night of a Crimson Moon</i>
@@ -716,7 +709,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2015 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 1.webp"></div>
 <div class="right"><h2>Hana Akari no Koibumi</h2>
   <i>Love Letter on a Lantern of Flowers</i>
@@ -739,7 +732,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2015 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 1.webp"></div>
 <div class="right"><h2>Yumenosaki Ryuseitaika</h2>
   <i>Yumenosaki Ryuseitai Song</i>
@@ -762,7 +755,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2015 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 1.webp"></div>
 <div class="right"><h2>Tenka Muteki☆Meteorangers!</h2>
   <i>The Unrivaled☆Meteorangers!</i>
@@ -786,7 +779,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata">
+<div class="item 2015 2wink yuta hinata">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 1.webp"></div>
 <div class="right"><h2>Sugar・Spice Houteishiki</h2>
   <i>Sugar・Spice Equation</i>
@@ -809,7 +802,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata">
+<div class="item 2015 2wink yuta hinata">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 1.webp"></div>
 <div class="right"><h2>Kangei☆2wink Zatsugidan</h2>
   <i>Greetings☆2wink Acrobatic Troupe</i>
@@ -832,7 +825,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime tl">
+<div class="item 2016 rabits nazuna tomoya mitsuru hajime tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 1.webp"></div>
 <div class="right"><h2>Joyful×Box*</h2>
 <div class="info-grid">
@@ -855,7 +848,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime tl">
+<div class="item 2016 rabits nazuna tomoya mitsuru hajime tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 1.webp"></div>
 <div class="right"><h2>Nousagi March♪</h2>
   <i>Wild Rabbits' March♪</i>
@@ -880,7 +873,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first trickstar subaru hokuto makoto mao">
+<div class="item 2016 trickstar subaru hokuto makoto mao">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 1.webp"></div>
 <div class="right"><h2>Rebellion Star</h2>
 <div class="info-grid">
@@ -902,7 +895,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first trickstar subaru hokuto makoto mao">
+<div class="item 2016 trickstar subaru hokuto makoto mao">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 1.webp"></div>
 <div class="right"><h2>CHERRY HAPPY STREAM</h2>
 <div class="info-grid">
@@ -924,7 +917,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2016 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 2.webp"></div>
 <div class="right"><h2>DESTRUCTION ROAD</h2>
 <div class="info-grid">
@@ -946,7 +939,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2016 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 2.webp"></div>
 <div class="right"><h2>Darkness 4</h2>
 <div class="info-grid">
@@ -968,7 +961,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata">
+<div class="item 2016 2wink yuta hinata">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 2.webp"></div>
 <div class="right"><h2>Heart Prism・Symmetry</h2>
 <div class="info-grid">
@@ -990,7 +983,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata">
+<div class="item 2016 2wink yuta hinata">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 2.webp"></div>
 <div class="right"><h2>2winkle Star Beat☆</h2>
 <div class="info-grid">
@@ -1012,7 +1005,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi tl">
+<div class="item 2016 knights tsukasa leo arashi ritsu izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 2.webp"></div>
 <div class="right"><h2>Silent Oath</h2>
 <div class="info-grid">
@@ -1035,7 +1028,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi tl">
+<div class="item 2016 knights tsukasa leo arashi ritsu izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 2.webp"></div>
 <div class="right"><h2>Fight for Judge</h2>
 <div class="info-grid">
@@ -1058,7 +1051,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2016 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 2.webp"></div>
 <div class="right"><h2>Omoide Tsuzuri</h2>
   <i>Weaving Memories</i>
@@ -1081,7 +1074,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2016 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 2.webp"></div>
 <div class="right"><h2>Zan -Ketsui no Yaiba-</h2>
   <i>Slash -Blade of Resolve-</i>
@@ -1104,7 +1097,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2016 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 2.webp"></div>
 <div class="right"><h2>Goshoku no Shooting☆Star!!!!!</h2>
   <i>Five-Colored Shooting☆Star!!!!!</i>
@@ -1127,7 +1120,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2016 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 2.webp"></div>
 <div class="right"><h2>RYUSEI HANABI</h2>
   <i>METEOR FIREWORKS</i>
@@ -1152,7 +1145,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime">
+<div class="item 2016 rabits nazuna tomoya mitsuru hajime">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 2.webp"></div>
 <div class="right"><h2>Hoppin' Season♪</h2>
 <div class="info-grid">
@@ -1174,7 +1167,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime tl">
+<div class="item 2016 rabits nazuna tomoya mitsuru hajime tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 2.webp"></div>
 <div class="right"><h2>Love Ra*bits Party!!</h2>
 <div class="info-grid">
@@ -1197,7 +1190,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first valkyrie shu mika tl">
+<div class="item 2016 valkyrie shu mika tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/valkyrie cd 2.webp"></div>
 <div class="right"><h2>Miwaku Geki</h2>
   <i>Bewitching Theatre</i>
@@ -1221,7 +1214,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first exvalkyrie nazuna shu mika">
+<div class="item 2016 exvalkyrie nazuna shu mika">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/valkyrie cd 2.webp"></div>
 <div class="right"><h2>Sajou no Roukaku</h2>
   <i>Castle of Sand</i>
@@ -1244,7 +1237,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first switch natsume tsumugi sora">
+<div class="item 2016 switch natsume tsumugi sora">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/switch cd 2.webp"></div>
 <div class="right"><h2>Temptation Magic</h2>
 <div class="info-grid">
@@ -1266,7 +1259,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first switch natsume tsumugi sora">
+<div class="item 2016 switch natsume tsumugi sora">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/switch cd 2.webp"></div>
 <div class="right"><h2>Knockin' Fantasy</h2>
 <div class="info-grid">
@@ -1288,7 +1281,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru tl">
+<div class="item 2017 fine eichi wataru tori yuzuru tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 2.webp"></div>
 <div class="right"><h2>Habataki no Fortissimo</h2>
   <i>Fortissimo of Fluttering Wings</i>
@@ -1312,7 +1305,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru">
+<div class="item 2017 fine eichi wataru tori yuzuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 2.webp"></div>
 <div class="right"><h2>Neo Sanctuary</h2>
 <div class="info-grid">
@@ -1334,7 +1327,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first trickstar subaru hokuto makoto mao tl">
+<div class="item 2017 trickstar subaru hokuto makoto mao tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 2.webp"></div>
 <div class="right"><h2>HEART→BEATER!!!!</h2>
 <div class="info-grid">
@@ -1357,7 +1350,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first trickstar subaru hokuto makoto mao tl">
+<div class="item 2017 trickstar subaru hokuto makoto mao tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 2.webp"></div>
 <div class="right"><h2>Nijiiro no Seasons</h2>
   <i>Rainbow-Colored Seasons</i>
@@ -1448,7 +1441,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2017 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 3.webp"></div>
 <div class="right"><h2>SUPER NOVA REVOLU5TAR</h2>
 <div class="info-grid">
@@ -1471,7 +1464,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2017 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai cd 3.webp"></div>
 <div class="right"><h2>GROWING STARRY DAYS</h2>
 <div class="info-grid">
@@ -1494,7 +1487,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi tl">
+<div class="item 2017 knights tsukasa leo arashi ritsu izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 3.webp"></div>
 <div class="right"><h2>Article of Faith</h2>
 <div class="info-grid">
@@ -1517,7 +1510,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi tl">
+<div class="item 2017 knights tsukasa leo arashi ritsu izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 3.webp"></div>
 <div class="right"><h2>Knights the Phantom Thief</h2>
 <div class="info-grid">
@@ -1540,7 +1533,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knightkillers leo kuro eichi nazuna tl">
+<div class="item 2017 knightkillers leo kuro eichi nazuna tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights cd 3.webp"></div>
 <div class="right"><h2>Crush of Judgment</h2>
 <div class="info-grid">
@@ -1563,7 +1556,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru">
+<div class="item 2017 fine eichi wataru tori yuzuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 3.webp"></div>
 <div class="right"><h2>Miracle Dream Traveler</h2>
 <div class="info-grid">
@@ -1585,7 +1578,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first fine eichi wataru tori yuzuru">
+<div class="item 2017 fine eichi wataru tori yuzuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/fine cd 3.webp"></div>
 <div class="right"><h2>Tryst of Stars</h2>
 <div class="info-grid">
@@ -1607,7 +1600,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first valkyrie shu mika">
+<div class="item 2017 valkyrie shu mika">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/valkyrie cd 3.webp"></div>
 <div class="right"><h2>Raisanka</h2>
   <i>Ode to Glory</i>
@@ -1630,7 +1623,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first valkyrie shu mika">
+<div class="item 2017 valkyrie shu mika">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/valkyrie cd 3.webp"></div>
 <div class="right"><h2>Last Lament</h2>
 <div class="info-grid">
@@ -1652,7 +1645,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata undead rei kaoru koga adonis">
+<div class="item 2017 2wink yuta hinata undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 3.webp"></div>
 <div class="right"><h2>TRICK with TREAT!!</h2>
 <div class="info-grid">
@@ -1674,7 +1667,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first 2wink yuta hinata">
+<div class="item 2017 2wink yuta hinata">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/2wink cd 3.webp"></div>
 <div class="right"><h2>WONDER WONDER TOY LAND</h2>
 <div class="info-grid">
@@ -1696,7 +1689,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2017 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 3.webp"></div>
 <div class="right"><h2>Gate of the Abyss</h2>
 <div class="info-grid">
@@ -1718,7 +1711,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis tl">
+<div class="item 2017 undead rei kaoru koga adonis tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 3.webp"></div>
 <div class="right"><h2>Break the Prison</h2>
 <div class="info-grid">
@@ -1741,7 +1734,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first deadmans rei keito koga">
+<div class="item 2017 deadmans rei keito koga">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead cd 3.webp"></div>
 <div class="right"><h2>Death Game Holic</h2>
 <div class="info-grid">
@@ -1763,7 +1756,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime tl">
+<div class="item 2017 rabits nazuna tomoya mitsuru hajime tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 3.webp"></div>
 <div class="right"><h2>Milky Starry Charm</h2>
 <div class="info-grid">
@@ -1786,7 +1779,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime">
+<div class="item 2017 rabits nazuna tomoya mitsuru hajime">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits cd 3.webp"></div>
 <div class="right"><h2>Dream Collection</h2>
 <div class="info-grid">
@@ -1808,7 +1801,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2017 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 3.webp"></div>
 <div class="right"><h2>Kengeki no Mai</h2>
   <i>Dance of Blades</i>
@@ -1836,7 +1829,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma tl">
+<div class="item 2017 aktk keito kuro souma tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki cd 3.webp"></div>
 <div class="right"><h2>Matsuriyo Emaki</h2>
   <i>Festival Night Scroll</i>
@@ -1860,7 +1853,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first switch natsume tsumugi sora">
+<div class="item 2017 switch natsume tsumugi sora">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/switch cd 3.webp"></div>
 <div class="right"><h2>Easter Carnival</h2>
 <div class="info-grid">
@@ -1882,7 +1875,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first switch natsume tsumugi sora">
+<div class="item 2017 switch natsume tsumugi sora">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/switch cd 3.webp"></div>
 <div class="right"><h2>Galaxy Destiny</h2>
 <div class="info-grid">
@@ -1905,7 +1898,7 @@ localStorage.setItem("theme", theme);
 </div></div>
 
 
-<div class="item first trickstar subaru hokuto makoto mao tl">
+<div class="item 2017 trickstar subaru hokuto makoto mao tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 3.webp"></div>
 <div class="right"><h2>BREAKTHROUGH!</h2>
 <div class="info-grid">
@@ -1929,7 +1922,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first trickstar subaru hokuto makoto mao tl">
+<div class="item 2017 trickstar subaru hokuto makoto mao tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/trickstar cd 3.webp"></div>
 <div class="right"><h2>DIAMOND SUMMER</h2>
 <div class="info-grid">
@@ -1952,7 +1945,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first mam madara">
+<div class="item 2018 mam madara">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/mam cd 3.webp"></div>
 <div class="right"><h2>Blooming World</h2>
 <div class="info-grid">
@@ -1974,7 +1967,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first mam madara">
+<div class="item 2018 mam madara">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/mam cd 3.webp"></div>
 <div class="right"><h2>Festive!</h2>
 <div class="info-grid">
@@ -1996,7 +1989,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first eden nagisa hiyori jun ibara tl">
+<div class="item 2018 eden nagisa hiyori jun ibara tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/eden cd.webp"></div>
 <div class="right"><h2>THE GENESIS</h2>
 <div class="info-grid">
@@ -2019,7 +2012,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first adam nagisa ibara tl">
+<div class="item 2018 adam nagisa ibara tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/eden cd.webp"></div>
 <div class="right"><h2>Ruler's Truth</h2>
 <div class="info-grid">
@@ -2042,7 +2035,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first eve hiyori jun tl">
+<div class="item 2018 eve hiyori jun tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/eden cd.webp"></div>
 <div class="right"><h2>Trap For You</h2>
 <div class="info-grid">
@@ -2065,7 +2058,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rst chiaki kanata tetora midori shinobu tl">
+<div class="item 2018 rst chiaki kanata tetora midori shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>Unlimited☆Power!!!!!</h2>
 <div class="info-grid">
@@ -2088,7 +2081,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo chiaki tl">
+<div class="item 2018 solo chiaki tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>ALWAYS HERO!</h2>
 <div class="info-grid">
@@ -2111,7 +2104,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo kanata tl">
+<div class="item 2018 solo kanata tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>Marine Blue・Rendezvous</h2>
 <div class="info-grid">
@@ -2134,7 +2127,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo tetora tl">
+<div class="item 2018 solo tetora tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>IRON HEART TIGER!</h2>
 <div class="info-grid">
@@ -2157,7 +2150,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo midori tl">
+<div class="item 2018 solo midori tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>Mahiru no Zanzou</h2>
 <div class="info-grid">
@@ -2180,7 +2173,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo shinobu tl">
+<div class="item 2018 solo shinobu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/ryuseitai present.webp"></div>
 <div class="right"><h2>Shippuu Jinrai Shinobi Michi</h2>
 <div class="info-grid">
@@ -2203,7 +2196,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first rabits nazuna tomoya mitsuru hajime tl">
+<div class="item 2018 rabits nazuna tomoya mitsuru hajime tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits present.webp"></div>
 <div class="right"><h2>Melty♡Kitchen</h2>
 <div class="info-grid">
@@ -2226,7 +2219,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo nazuna tl">
+<div class="item 2018 solo nazuna tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits present.webp"></div>
 <div class="right"><h2>Nii~chan Ouen Dan☆</h2>
 <div class="info-grid">
@@ -2249,7 +2242,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo mitsuru">
+<div class="item 2018 solo mitsuru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits present.webp"></div>
 <div class="right"><h2>Start♪ Dash Dash!</h2>
 <div class="info-grid">
@@ -2271,7 +2264,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo tomoya tl">
+<div class="item 2018 solo tomoya tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits present.webp"></div>
 <div class="right"><h2>Higher↑ Higher↑</h2>
 <div class="info-grid">
@@ -2294,7 +2287,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo hajime">
+<div class="item 2018 solo hajime">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/rabits present.webp"></div>
 <div class="right"><h2>Happy Coming＊Tea Time</h2>
 <div class="info-grid">
@@ -2316,7 +2309,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first knights tsukasa leo arashi ritsu izumi tl">
+<div class="item 2018 knights tsukasa leo arashi ritsu izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>Grateful allegiance</h2>
 <div class="info-grid">
@@ -2339,7 +2332,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo leo tl">
+<div class="item 2018 solo leo tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>Birthday Of Music!</h2>
 <div class="info-grid">
@@ -2362,7 +2355,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo izumi tl">
+<div class="item 2018 solo izumi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>Ironic Blue</h2>
 <div class="info-grid">
@@ -2385,7 +2378,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo ritsu tl">
+<div class="item 2018 solo ritsu tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>Mayonaka no Nocturne</h2>
 <div class="info-grid">
@@ -2408,7 +2401,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo arashi tl">
+<div class="item 2018 solo arashi tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>JEWEL STONE</h2>
 <div class="info-grid">
@@ -2432,7 +2425,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo tsukasa tl">
+<div class="item 2018 solo tsukasa tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/knights present.webp"></div>
 <div class="right"><h2>With My Honesty</h2>
 <div class="info-grid">
@@ -2456,7 +2449,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first aktk keito kuro souma">
+<div class="item 2018 aktk keito kuro souma">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki present.webp"></div>
 <div class="right"><h2>Usubeniiro no Yakusoku</h2>
   <i>Pale Red Promise</i>
@@ -2479,7 +2472,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo keito tl">
+<div class="item 2018 solo keito tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki present.webp"></div>
 <div class="right"><h2>Akaneji no Kaikou</h2>
   <i>Encounter at the Sunset Road</i>
@@ -2503,7 +2496,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo kuro">
+<div class="item 2018 solo kuro">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki present.webp"></div>
 <div class="right"><h2>Crimson Soul</h2>
 <div class="info-grid">
@@ -2525,7 +2518,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo souma tl">
+<div class="item 2018 solo souma tl">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/akatsuki present.webp"></div>
 <div class="right"><h2>Ouka Kenran Seishunka</h2>
   <i>Rejoice the Brilliance of Youthful Splendor</i>
@@ -2549,7 +2542,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first undead rei kaoru koga adonis">
+<div class="item 2018 undead rei kaoru koga adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead present.webp"></div>
 <div class="right"><h2>Valentine Eve's Nightmare</h2>
 <div class="info-grid">
@@ -2571,7 +2564,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo rei">
+<div class="item 2018 solo rei">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead present.webp"></div>
 <div class="right"><h2>Bloody Moon Vampire</h2>
 <div class="info-grid">
@@ -2593,7 +2586,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo kaoru">
+<div class="item 2018 solo kaoru">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead present.webp"></div>
 <div class="right"><h2>Feather Heartache</h2>
 <div class="info-grid">
@@ -2615,7 +2608,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo koga">
+<div class="item 2018 solo koga">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead present.webp"></div>
 <div class="right"><h2>RIOT WOLF</h2>
 <div class="info-grid">
@@ -2637,7 +2630,7 @@ localStorage.setItem("theme", theme);
 </div>
 </div></div>
 
-<div class="item first solo adonis">
+<div class="item 2018 solo adonis">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/undead present.webp"></div>
 <div class="right"><h2>Saql Faith</h2>
 <div class="info-grid">
@@ -5949,7 +5942,7 @@ localStorage.setItem("theme", theme);
 </div></div>
 </div>
 
-<div class="item first other trickstar fine knights">
+<div class="item 2018 other trickstar fine knights">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/on stage.webp"></div>
 <div class="right"><h2>On Stage Original Soundtrack</h2>
 <p><h3><b>—</b> Growing Smile</h3></p>
@@ -5965,7 +5958,7 @@ localStorage.setItem("theme", theme);
 </div></div>
 </div>
 
-<div class="item first other aktk fine">
+<div class="item 2018 other aktk fine">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/festival.webp"></div>
 <div class="right"><h2>On Stage Festival Soundtrack</h2>
 <p><h3><b>—</b> Kaguya no Hana</h3></p>
@@ -5977,7 +5970,7 @@ localStorage.setItem("theme", theme);
 </div></div>
 </div>
 
-<div class="item first mam rst aktk other">
+<div class="item 2018 mam rst aktk other">
 <div class="box"><div class="left"><img src="https://enstarsmasterlist.github.io/docs/assets/images/song/meteor lights.webp"></div>
 <div class="right"><h2>Extra Stage ~Meteor Lights~ Soundtrack</h2>
 <p><h3><b>—</b> Finding Winding Road</h3></p>
